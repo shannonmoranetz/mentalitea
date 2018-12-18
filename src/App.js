@@ -9,7 +9,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div>hello world</div>
+        <h1>MentaliTea</h1>
         <Controls />
         <Splash />
         <TeaCard />
