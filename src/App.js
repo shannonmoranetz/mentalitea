@@ -8,7 +8,7 @@ import TeaList from './TeaList.js';
 export default class App extends Component {
   render() {
     return (
-     
+      <div>hello world</div>
     );
   }
 }

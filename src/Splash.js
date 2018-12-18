@@ -4,7 +4,7 @@ import './styles/Main.scss';
 export default class Splash extends Component {
   render() {
     return (
-     
+      <div>this is splash</div>
     );
   }
 }
