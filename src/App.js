@@ -6,14 +6,53 @@ import TeaCard from './TeaCard.js';
 import TeaList from './TeaList.js';
 
 export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      teaData: [],
+      moodData: [],
+      userSelectedTeas: []
+    };
+  }
+
+
+// filterTeaByMood = (descriptor) => {
+//   let matchingMood = moods.filter((mood) => {
+//     return mood.descriptors.includes(descriptor);
+//   });
+
+//   let userSelectedTeas = tea.filter((currentTea) => {
+//     return matchingMood[0].moodId === currentTea.moodId;
+//   });
+
+//   return userSelectedTeas;
+// }
+
+///^^^^^^splash page user input will pass back  up descriptor for findTea function
+
+
+// filterTeaByCaffeine = (caffeineLevel) => {
+//   let userSelectedCaffeineLevel = tea.filter((currentTea) => {
+//     return currentTea.caffeine === caffeineLevel;
+//   });
+
+//   return userSelectedCaffeineLevel;
+// }
+
+//^^^^^^^controls component radio button with caffeine level as the argument 
+
+
+
+
+
   render() {
     return (
       <div>
         <h1>MentaliTea</h1>
-        <Controls />
+        {/* <Controls /> */}
         <Splash />
-        <TeaCard />
-        <TeaList />
+        {/* <TeaCard />
+        <TeaList /> */}
       </div>
     );
   }
