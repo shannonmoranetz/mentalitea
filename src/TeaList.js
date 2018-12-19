@@ -7,9 +7,7 @@ export default function TeaList() {
     return (
      <ul>
          {
-             test.map((greet) => {
-                 return <li>{greet}</li>
-             })
+             
          }
      </ul>
     );

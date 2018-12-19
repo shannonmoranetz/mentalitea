@@ -11,17 +11,22 @@ export default class Splash extends Component {
   }
 
 
-updateSelectedMood = (event) => {
+changeUserSelectedMood = (event) => {
   this.setState({
     selectedMood: event.target.value
   });
 }
 
+updateUserSelectedMood = () => {
+  this.props.filterTeaByMood(this.state.selectedMood)
+}
+
 
 render() {
   return (
-    <div>
-      <select onChange={this.updateSelectedMood}>
+    <div className="splash-page-container">
+    <div className="splash-page">
+      <select onChange={this.changeUserSelectedMood}>
         <option>Select your mood</option>
         {
           this.props.moods.reduce((allDescriptors, mood) => {
@@ -32,8 +37,8 @@ render() {
         }
         
       </select>
-      <button>Brew-Tea</button>
-        
+      <button onClick={this.updateUserSelectedMood}>Brew-Tea</button>
+        </div>
     </div>
   );
 }
