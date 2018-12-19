@@ -68,9 +68,13 @@ filterTeaByMood = (descriptor) => {
 
 
 // createAllDescriptors = () => {
-//   return moods.reduce((allDescriptors, mood) => {
+//   const allDescriptors = this.state.moodData.reduce((allDescriptors, mood) => {
 //     return allDescriptors.concat(mood.descriptors);
 //   }, []);
+
+//   this.setState({
+//     allDescriptors: allDescriptors
+//   });
 // }
 
 // ^^^^^^^^ array values for drop-down descriptor input
@@ -83,7 +87,7 @@ render() {
       <h1>MentaliTea</h1>
       {/* <Controls /> */}
       <Splash filterTeaByMood={this.filterTeaByMood}
-                                                      />
+              moods={this.state.moodData}/>
       {/* <TeaCard />
         <TeaList /> */}
     </div>
