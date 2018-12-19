@@ -11,7 +11,8 @@ export default class App extends Component {
     this.state = {
       teaData: [],
       moodData: [],
-      userSelectedTeas: []
+      userSelectedTeas: [],
+      allDescriptors: []
     };
   }
 
@@ -42,6 +43,14 @@ export default class App extends Component {
 //^^^^^^^controls component radio button with caffeine level as the argument 
 
 
+
+// createAllDescriptors = () => {
+//   return moods.reduce((allDescriptors, mood) => {
+//     return allDescriptors.concat(mood.descriptors);
+//   }, []);
+// }
+
+// ^^^^^^^^ array values for drop-down descriptor input
 
 
 
