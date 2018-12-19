@@ -8,30 +8,24 @@ export default class TeaCard extends Component {
       toggleExpand: true
     }
   }
+
+  toggleExpandFunction = () => {
+    this.setState({
+      toggleExpand: !this.state.toggleExpand
+    })
+  }
   render() {
     if(this.state.toggleExpand) {
     return (
-      <div>
-        <ul>
-          {
-            this.props.userSelectedTea.map((tea) => {
-              return <li>{tea.tea}</li>
-            })
-          }
-        </ul>
-      </div>
+        <li onClick={this.toggleExpandFunction}>
+          {this.props.userSelectedTeaList.tea}
+        </li>
     )} else {
       return (
-        <div>
-          <ul>
-            {
-              this.props.userSelectedTea.map((tea) => {
-                return <li>{tea.tea} {tea.moodId}</li>
-              })
-            }
-          </ul>
-        </div>
+          <li  className="full-tea-info" onClick={this.toggleExpandFunction}>
+            {this.props.userSelectedTeaList.tea} {this.props.userSelectedTeaList.caffeine}
+          </li>
       )
-    };
+    }
   }
 }

@@ -6,7 +6,15 @@ import TeaCard from './TeaCard.js';
 export default function TeaList(props) {
     return (
      <div className="tea-list">
-        <TeaCard userSelectedTea={props.userSelectedTea}/>
+        <ul>
+        {
+            props.userSelectedTea.map((tea, index) => {
+                return (
+                    <TeaCard key={index} userSelectedTeaList={tea}/>
+                )
+            }) 
+        }
+        </ul>
      </div>
     );
 }
