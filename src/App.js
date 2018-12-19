@@ -38,17 +38,19 @@ export default class App extends Component {
       .catch(error => console.log(error));
   }
 
-// filterTeaByMood = (descriptor) => {
-//   let matchingMood = moods.filter((mood) => {
-//     return mood.descriptors.includes(descriptor);
-//   });
+filterTeaByMood = (descriptor) => {
+  let matchingMood = this.state.moodData.filter((mood) => {
+    return mood.descriptors.includes(descriptor);
+  });
 
-//   let userSelectedTeas = tea.filter((currentTea) => {
-//     return matchingMood[0].moodId === currentTea.moodId;
-//   });
-
-//   return userSelectedTeas;
-// }
+  let userSelectedTeas = this.state.teaData.filter((currentTea) => {
+    return matchingMood[0].moodId === currentTea.moodId;
+  });
+  
+  this.setState({
+    userSelectedTeas: userSelectedTeas
+  });
+}
 
 ///^^^^^^splash page user input will pass back  up descriptor for findTea function
 
@@ -75,17 +77,18 @@ export default class App extends Component {
 
 
 
-  render() {
-    return (
-      <div>
-        <h1>MentaliTea</h1>
-        {/* <Controls /> */}
-        <Splash />
-        {/* <TeaCard />
+render() {
+  return (
+    <div>
+      <h1>MentaliTea</h1>
+      {/* <Controls /> */}
+      <Splash filterTeaByMood={this.filterTeaByMood}
+                                                      />
+      {/* <TeaCard />
         <TeaList /> */}
-      </div>
-    );
-  }
+    </div>
+  );
+}
 }
 
 
