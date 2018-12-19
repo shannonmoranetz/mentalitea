@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles/Main.scss';
+import TeaCard from './TeaCard.js';
 
-const test = ["black tea", "chai tea", "green tea", "goodbye"]
 
-export default function TeaList() {
+export default function TeaList(props) {
     return (
-     <ul>
-         {
-             
-         }
-     </ul>
+     <div className="tea-list">
+        <TeaCard userSelectedTea={props.userSelectedTea}/>
+     </div>
     );
 }

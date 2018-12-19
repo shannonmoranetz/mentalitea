@@ -52,6 +52,11 @@ filterTeaByMood = (descriptor) => {
     userSelectedTeas: userSelectedTeas
   });
 }
+toggleSplash = () => {
+  this.setState({
+    renderSplashPage: !this.state.renderSplashPage
+  })
+}
 
 ///^^^^^^splash page user input will pass back  up descriptor for findTea function
 
@@ -83,16 +88,24 @@ filterTeaByMood = (descriptor) => {
 
 
 render() {
-  return (
-    <div>
-      <h1>MentaliTea</h1>
-      {/* <Controls /> */}
-      <Splash filterTeaByMood={this.filterTeaByMood}
-              moods={this.state.moodData}/>
-      {/* <TeaCard />
-        <TeaList /> */}
-    </div>
-  );
+  if (this.state.renderSplashPage) {
+    return (
+      <div>
+        <h1>MentaliTea</h1>
+        <Splash filterTeaByMood={this.filterTeaByMood}
+                moods={this.state.moodData}
+                toggleSplash={this.toggleSplash}/>
+      </div>
+    );
+  }else {
+    return (
+      <div>
+        <h1>MentaliTea</h1>
+        <Controls /> 
+        <TeaList userSelectedTea={this.state.userSelectedTeas}/>
+      </div>
+    )
+  }
 }
 }
 

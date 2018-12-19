@@ -6,7 +6,6 @@ export default class Splash extends Component {
     super();
     this.state = {
       selectedMood: '',
-      splashPageVisible: true
     };
   }
 
@@ -19,6 +18,7 @@ changeUserSelectedMood = (event) => {
 
 updateUserSelectedMood = () => {
   this.props.filterTeaByMood(this.state.selectedMood)
+  this.props.toggleSplash()
 }
 
 
