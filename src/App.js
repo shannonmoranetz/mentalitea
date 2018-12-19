@@ -17,6 +17,27 @@ export default class App extends Component {
   }
 
 
+
+  componentDidMount() {
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/tea')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          teaData: data.tea
+        });
+      })
+      .catch(error => console.log(error));
+
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/moods')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          moodData: data.moods
+        });
+      })
+      .catch(error => console.log(error));
+  }
+
 // filterTeaByMood = (descriptor) => {
 //   let matchingMood = moods.filter((mood) => {
 //     return mood.descriptors.includes(descriptor);
