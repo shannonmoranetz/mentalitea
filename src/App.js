@@ -12,7 +12,7 @@ export default class App extends Component {
       teaData: [],
       moodData: [],
       userSelectedTeas: [],
-      allDescriptors: []
+      userSelectedMood: ''
     };
   }
 
@@ -48,7 +48,8 @@ filterTeaByMood = (descriptor) => {
   });
   
   this.setState({
-    userSelectedTeas: userSelectedTeas
+    userSelectedTeas: userSelectedTeas,
+    userSelectedMood: descriptor
   });
 }
 toggleSplash = () => {
@@ -72,20 +73,6 @@ toggleSplash = () => {
 
 
 
-// createAllDescriptors = () => {
-//   const allDescriptors = this.state.moodData.reduce((allDescriptors, mood) => {
-//     return allDescriptors.concat(mood.descriptors);
-//   }, []);
-
-//   this.setState({
-//     allDescriptors: allDescriptors
-//   });
-// }
-
-// ^^^^^^^^ array values for drop-down descriptor input
-
-
-
 render() {
   if (this.state.renderSplashPage) {
     return (
@@ -101,7 +88,8 @@ render() {
       <div>
         <h1>MentaliTea</h1>
         <Controls /> 
-        <TeaList userSelectedTea={this.state.userSelectedTeas}/>
+        <TeaList userSelectedTea={this.state.userSelectedTeas}
+                 userSelectedMood={this.state.userSelectedMood}/>
       </div>
     )
   }
