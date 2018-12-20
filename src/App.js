@@ -3,6 +3,7 @@ import './styles/Main.scss';
 import Controls from './Controls.js';
 import Splash from './Splash.js';
 import TeaList from './TeaList.js';
+import { ReactComponent as Title } from './styles/images/title.svg'
 export default class App extends Component {
   constructor() {
     super();
@@ -65,8 +66,10 @@ toggleSplash = () => {
 render() {
   if (this.state.renderSplashPage) {
     return (
-      <div>
-        <h1>MentaliTea</h1>
+      <div className="App"> 
+        <header>
+          <Title className="title" />
+        </header>
         <Splash filterTeaByMood={this.filterTeaByMood}
                 moods={this.state.moodData}
                 toggleSplash={this.toggleSplash}/>
@@ -74,8 +77,10 @@ render() {
     );
   }else {
     return (
-      <div>
-        <h1>MentaliTea</h1>
+      <div className="App">
+        <header>
+          <Title className="title" />
+        </header>
         <Controls /> 
         <TeaList userSelectedTea={this.state.userSelectedTeas}
                  userSelectedMood={this.state.userSelectedMood}/>

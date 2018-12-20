@@ -1,5 +1,21 @@
-.App {
+
+
+body {
   text-align: center;
+  background-image: url("images/app-background.jpg");
+  background-size: cover;
+}
+
+header {
+  padding: 1px;
+  animation: head 5s forwards;
+  animation-delay: 3s;
+}
+
+.title {
+  stroke-dasharray: 1000;
+  animation: title 4s linear forwards;
+  stroke: #000000;
 }
 
 .App-logo {
@@ -22,16 +38,42 @@
   color: #61dafb;
 }
 
-h1 {
-  text-align: center;
-  font-size: 3em;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes title {
+  0% {
+      opacity: 1;
+      stroke-dashoffset: -1000;
+      fill: none;
+  }
+  50% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 1000;
+      fill: none;
+  }
+  100% {
+      opacity: 1;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 1000;
+      fill: black;
+  }
+}
+
+@keyframes head {
+  0% {
+      background-color: none;
+  }
+  80% {
+      background-color: none;
+  }
+  100% {
+      background-color: #b8aba1;
   }
 }
