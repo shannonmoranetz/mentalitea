@@ -51,6 +51,7 @@ filterTeaByMood = (descriptor) => {
     userSelectedMood: descriptor
   });
 }
+
 toggleSplash = () => {
   this.setState({
     renderSplashPage: !this.state.renderSplashPage
@@ -76,7 +77,7 @@ render() {
     return (
       <div>
         <h1>MentaliTea</h1>
-        <Controls /> 
+        <Controls toggleSplash={this.toggleSplash}/>
         <TeaList userSelectedTea={this.state.userSelectedTeas}
                  userSelectedMood={this.state.userSelectedMood}/>
       </div>

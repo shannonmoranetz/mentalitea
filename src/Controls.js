@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import './styles/Main.scss';
 
 export default class Controls extends Component {
+
+  reselectMood()
+
   render() {
     return (
-      <div>this is controls</div>
+      <div className="controls-container">
+        <button onClick={this.props.toggleSplash}>Reset</button>
+      </div>
     );
   }
 }
