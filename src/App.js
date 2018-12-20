@@ -78,17 +78,11 @@ render() {
     );
   }else {
     return (
-<<<<<<< HEAD
       <div className="App">
         <header>
           <Title className="title" />
         </header>
-        <Controls /> 
-=======
-      <div>
-        <h1>MentaliTea</h1>
         <Controls toggleSplash={this.toggleSplash}/>
->>>>>>> controls-component
         <TeaList userSelectedTea={this.state.userSelectedTeas}
                  userSelectedMood={this.state.userSelectedMood}/>
       </div>
