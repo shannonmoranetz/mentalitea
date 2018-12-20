@@ -1,15 +1,30 @@
-// import React from 'react';
-// import Splash from './Splash';
-// import { shallow } from 'enzyme';
+import React from 'react';
+import Splash from './Splash';
+import { shallow } from 'enzyme';
 
-// describe('Splash', () => {
-//   let wrapper;
+const value = 'annoyed';
+const moods = [{
+  mood: "Stressed",
+  descriptors: [
+  "agitated",
+  "on-edge",
+  "worried",
+  "tense"
+  ],
+  moodId: 1
+  }];
 
-//   beforeEach(() => {
-//     wrapper = shallow(
-//       );
-//   });
+describe('Splash', () => {
+  let wrapper;
 
-//   it('should ', () => {
+  beforeEach(() => {
+    wrapper = shallow(
+      <Splash moods={moods}/>
+      );
+  });
 
-//   });
+  it('should update the user\'s selected mood', () => {
+    wrapper.find('.user-selected-mood').simulate('change', {target: {value: 'annoyed'}});
+    expect(wrapper.state('selectedMood')).toEqual('annoyed')
+  });
+});
