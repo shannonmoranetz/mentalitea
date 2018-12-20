@@ -8,3 +8,14 @@ export default class Controls extends Component {
     );
   }
 }
+
+
+// filterTeaByCaffeine = (caffeineLevel) => {
+//   let userSelectedCaffeineLevel = tea.filter((currentTea) => {
+//     return currentTea.caffeine === caffeineLevel;
+//   });
+
+//   return userSelectedCaffeineLevel;
+// }
+
+//^^^^^^^controls component radio button with caffeine level as the argument 

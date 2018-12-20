@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`teaList should display all tea cards 1`] = `
+<div
+  className="tea-list"
+>
+  <h1>
+    Teas for when you're feeling 
+    <span
+      className="selected-descriptor"
+    />
+    :
+  </h1>
+  <ul>
+    <TeaCard
+      filteredTeaList={
+        Object {
+          "caffeine": "high",
+          "category": "Black",
+          "link": "https://www.adagio.com/black/irish_breakfast.html",
+          "moodId": 5,
+          "tastes": Array [
+            "citrus",
+            "spice",
+            "malty",
+          ],
+          "tea": "Irish Breakfast",
+        }
+      }
+      key="0"
+    />
+    <TeaCard
+      filteredTeaList={
+        Object {
+          "caffeine": "high",
+          "category": "Black",
+          "link": "https://www.adagio.com/black/earl_grey_bravo.html",
+          "moodId": 5,
+          "tastes": Array [
+            "citrus",
+            "zesty",
+            "sweet",
+          ],
+          "tea": "Earl Grey Bravo",
+        }
+      }
+      key="1"
+    />
+    <TeaCard
+      filteredTeaList={
+        Object {
+          "caffeine": "high",
+          "category": "Black",
+          "link": "https://www.adagio.com/black/black_dragon_pearls.html",
+          "moodId": 5,
+          "tastes": Array [
+            "chocolate",
+            "sweet",
+            "earthy",
+          ],
+          "tea": "Black Dragon Pearls",
+        }
+      }
+      key="2"
+    />
+  </ul>
+</div>
+`;

@@ -3,7 +3,6 @@ import './styles/Main.scss';
 import Controls from './Controls.js';
 import Splash from './Splash.js';
 import TeaList from './TeaList.js';
-
 export default class App extends Component {
   constructor() {
     super();
@@ -55,21 +54,11 @@ filterTeaByMood = (descriptor) => {
 toggleSplash = () => {
   this.setState({
     renderSplashPage: !this.state.renderSplashPage
-  })
+  });
 }
 
-///^^^^^^splash page user input will pass back  up descriptor for findTea function
 
 
-// filterTeaByCaffeine = (caffeineLevel) => {
-//   let userSelectedCaffeineLevel = tea.filter((currentTea) => {
-//     return currentTea.caffeine === caffeineLevel;
-//   });
-
-//   return userSelectedCaffeineLevel;
-// }
-
-//^^^^^^^controls component radio button with caffeine level as the argument 
 
 
 
