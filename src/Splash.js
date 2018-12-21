@@ -9,14 +9,11 @@ export default class Splash extends Component {
     };
   }
 
-  changeUserSelectedMood = (event) => {
+changeUserSelectedMood = (event) => {
     this.setState({
       selectedMood: event.target.value
     });
   }
-
-
-
 
 updateUserSelectedMood = () => {
   this.props.filterTeaByMood(this.state.selectedMood)

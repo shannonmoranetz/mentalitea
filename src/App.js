@@ -16,8 +16,6 @@ export default class App extends Component {
     };
   }
 
-
-
   componentDidMount() {
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/tea')
       .then(response => response.json())
@@ -53,18 +51,11 @@ filterTeaByMood = (descriptor) => {
   });
 }
 
-
-
 toggleSplash = () => {
   this.setState({
     renderSplashPage: !this.state.renderSplashPage
   });
 }
-
-
-
-
-
 
 render() {
   if (this.state.renderSplashPage) {

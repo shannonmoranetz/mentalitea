@@ -5,31 +5,35 @@ export default class Controls extends Component {
   constructor() {
     super();
     this.state = {
-      refreshSelectedMood: ''
+      selectedMood: ''
     }
   }
 
-  refreshSelectedMood = (event) => {
+changeUserSelectedMood = (event) => {
     this.setState({
-      refreshSelectedMood: event.target.value
+      selectedMood: event.target.value
     });
-    this.props.filterTeaByMood(this.state.refreshSelectedMood)
   }
+
+updateUserSelectedMood = () => {
+  this.props.filterTeaByMood(this.state.selectedMood)
+}
 
   render() {
     return (
       <div className="controls-container">
-        <button onClick={this.props.toggleSplash}>Reset</button>
-        <select className="user-refresh-mood" onChange={this.refreshSelectedMood}>
-        <option>Change your mood</option>
-        {
-          this.props.moods.reduce((allDescriptors, mood) => {
-            return allDescriptors.concat(mood.descriptors);
-          }, []).map((mood, index) => {
-            return <option key={index} value={mood}>{mood}</option>;
-          })
-        }
-      </select>
+          <button onClick={this.props.toggleSplash}>Reset</button>
+          <select className="user-selected-mood" onChange={this.changeUserSelectedMood}>
+            <option>Select your mood</option>
+            {
+              this.props.moods.reduce((allDescriptors, mood) => {
+                return allDescriptors.concat(mood.descriptors);
+              }, []).map((mood, index) => {
+                return <option key={index} value={mood}>{mood}</option>;
+              })
+            }
+          </select>
+          <button onClick={this.updateUserSelectedMood}>Brew-Tea</button>
       </div>
     );
   }
