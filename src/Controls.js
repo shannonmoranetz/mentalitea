@@ -6,7 +6,6 @@ export default class Controls extends Component {
     super();
     this.state = {
       selectedMood: '',
-      // caffeineChoice: '',
     }
   }
 
@@ -20,34 +19,9 @@ export default class Controls extends Component {
     this.props.filterTeaByMood(this.state.selectedMood)
   }
 
-  // updateByCaffeine = () => {
-  //   this.props.updateCaffeineFilter(this.state.caffeineChoice)
-  // }
-
-  // findCaffeineLevel = (caffeineLevel) => {
-  //   let userSelectedCaffeineLevel = this.props.selectedTeas.reduce((caffeineValue, tea) => {
-  //     if (tea.caffeine === caffeineLevel) {
-  //       caffeineValue = caffeineLevel;
-  //     }
-  //     return caffeineValue;
-  //   }, '')
-
-  //   this.setState({
-  //     caffeineChoice: userSelectedCaffeineLevel
-  //   })
-
-  //   this.updateByCaffeine();
-  // }
-
   findCaffeineLevel = (newlevel) => {
-    // this.setState({
-    //   caffeineChoice: newlevel
-    // })
     this.props.updateCaffeineFilter(newlevel)
-
   }
-
-
 
   render() {
     return (
@@ -72,14 +46,3 @@ export default class Controls extends Component {
     );
   }
 }
-
-
-// filterTeaByCaffeine = (caffeineLevel) => {
-//   let userSelectedCaffeineLevel = tea.filter((currentTea) => {
-//     return currentTea.caffeine === caffeineLevel;
-//   });
-
-//   return userSelectedCaffeineLevel;
-// }
-
-//^^^^^^^controls component radio button with caffeine level as the argument 
