@@ -1,5 +1,18 @@
 .controls-container {
   height: 100px;
   width: 100px;
-  border: 2px solid blue;
+  display: inline;
 }
+
+.reset-button {
+  display: inline-block;
+}
+
+.rebrew-tea {
+  display: inline-block;
+}
+
+.user-reselected-mood {
+  display: inline-block;
+}
+

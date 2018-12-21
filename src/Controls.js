@@ -22,8 +22,8 @@ updateUserSelectedMood = () => {
   render() {
     return (
       <div className="controls-container">
-          <button onClick={this.props.toggleSplash}>Reset</button>
-          <select className="user-selected-mood" onChange={this.changeUserSelectedMood}>
+          <button className="reset-button" onClick={this.props.toggleSplash}>Reset</button>
+          <select className="user-reselected-mood" onChange={this.changeUserSelectedMood}>
             <option>Select your mood</option>
             {
               this.props.moods.reduce((allDescriptors, mood) => {
@@ -33,7 +33,7 @@ updateUserSelectedMood = () => {
               })
             }
           </select>
-          <button onClick={this.updateUserSelectedMood}>Brew-Tea</button>
+          <button className="rebrew-tea" onClick={this.updateUserSelectedMood}>Brew-Tea</button>
       </div>
     );
   }

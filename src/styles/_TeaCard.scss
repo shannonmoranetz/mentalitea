@@ -1,9 +1,17 @@
 li {
-    background-color: yellow;
-    border: 2px solid black;
+    background-image: url("./images/card-background.jpg");
+    border-radius: 10px;
+    height: 50px;
+    margin: 10px;
+    background-size: cover;
+    list-style-type: none;
 }
 
 .full-tea-info {
-height: 500px;
-background-color: pink;
+height: 330px;
+background-size: cover;
+}
+
+.tea-name {
+    float: right;
 }
