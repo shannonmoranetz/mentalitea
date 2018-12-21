@@ -5,24 +5,58 @@ export default class Controls extends Component {
   constructor() {
     super();
     this.state = {
-      selectedMood: ''
+      selectedMood: '',
+      // caffeineChoice: '',
     }
   }
 
-changeUserSelectedMood = (event) => {
+  changeUserSelectedMood = (event) => {
     this.setState({
       selectedMood: event.target.value
     });
   }
 
-updateUserSelectedMood = () => {
-  this.props.filterTeaByMood(this.state.selectedMood)
-}
+  updateUserSelectedMood = () => {
+    this.props.filterTeaByMood(this.state.selectedMood)
+  }
+
+  // updateByCaffeine = () => {
+  //   this.props.updateCaffeineFilter(this.state.caffeineChoice)
+  // }
+
+  // findCaffeineLevel = (caffeineLevel) => {
+  //   let userSelectedCaffeineLevel = this.props.selectedTeas.reduce((caffeineValue, tea) => {
+  //     if (tea.caffeine === caffeineLevel) {
+  //       caffeineValue = caffeineLevel;
+  //     }
+  //     return caffeineValue;
+  //   }, '')
+
+  //   this.setState({
+  //     caffeineChoice: userSelectedCaffeineLevel
+  //   })
+
+  //   this.updateByCaffeine();
+  // }
+
+  findCaffeineLevel = (newlevel) => {
+    // this.setState({
+    //   caffeineChoice: newlevel
+    // })
+    this.props.updateCaffeineFilter(newlevel)
+
+  }
+
+
 
   render() {
     return (
       <div className="controls-container">
           <button className="reset-button" onClick={this.props.toggleSplash}>Reset</button>
+          <button onClick={() => this.findCaffeineLevel('none')}>None</button>
+          <button onClick={() => this.findCaffeineLevel('low')}>Low</button>
+          <button onClick={() => this.findCaffeineLevel('moderate')}>Moderate</button>
+          <button onClick={() => this.findCaffeineLevel('high')}>High</button>
           <select className="user-reselected-mood" onChange={this.changeUserSelectedMood}>
             <option>Select your mood</option>
             {
