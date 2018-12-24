@@ -12,12 +12,16 @@ export default class Splash extends Component {
 changeUserSelectedMood = (event) => {
     this.setState({
       selectedMood: event.target.value
-    });
+    })
   }
 
 updateUserSelectedMood = () => {
-  this.props.filterTeaByMood(this.state.selectedMood)
-  this.props.toggleSplash()
+  if (this.state.selectedMood === '') {
+    alert('Please pick a mood')
+  } else {
+    this.props.filterTeaByMood(this.state.selectedMood)
+    this.props.toggleSplash()
+  }
 }
 
 render() {
