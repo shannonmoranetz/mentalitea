@@ -16,12 +16,8 @@ changeUserSelectedMood = (event) => {
   }
 
 updateUserSelectedMood = () => {
-  if (this.state.selectedMood === '') {
-    alert('Please pick a mood')
-  } else {
-    this.props.filterTeaByMood(this.state.selectedMood)
-    this.props.toggleSplash()
-  }
+  this.props.filterTeaByMood(this.state.selectedMood)
+  this.props.toggleSplash()
 }
 
 render() {

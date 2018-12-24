@@ -39,14 +39,20 @@ export default class App extends Component {
   }
 
 filterTeaByMood = (descriptor) => {
-  let matchingMood = this.state.moodData.filter((mood) => {
-    return mood.descriptors.includes(descriptor);
-  });
-
-  this.setState({
-    userSelectedMood: descriptor,
-    moodId: matchingMood[0].moodId
-  });
+  if (descriptor === '') {
+    this.setState({
+      userSelectedMood: 'thirsty',
+      moodId: 0
+    });
+  } else {
+    let matchingMood = this.state.moodData.filter((mood) => {
+      return mood.descriptors.includes(descriptor);
+    });
+    this.setState({
+      userSelectedMood: descriptor,
+      moodId: matchingMood[0].moodId
+    });
+  }
 }
 
 toggleSplash = () => {
@@ -62,16 +68,22 @@ toggleSplash = () => {
   }
 
 getFilteredTeas() {
-  let userSelectedTeas = this.state.teaData.filter((currentTea) => {
-    return this.state.moodId === currentTea.moodId;
-  });
-  if (this.state.caffeineLevel !== '') {
-    userSelectedTeas = userSelectedTeas.filter((tea) => {
-      return tea.caffeine === this.state.caffeineLevel;
+  if (this.state.userSelectedMood === 'thirsty') {
+    let userSelectedTeas = this.state.teaData.map((tea) => {
+      return tea;
     })
-
-  }
     return userSelectedTeas;
+  } else {
+    let userSelectedTeas = this.state.teaData.filter((currentTea) => {
+      return this.state.moodId === currentTea.moodId;
+    });
+    if (this.state.caffeineLevel !== '') {
+      userSelectedTeas = userSelectedTeas.filter((tea) => {
+        return tea.caffeine === this.state.caffeineLevel;
+      })
+    }
+    return userSelectedTeas;
+  }
 }
 
 render() {
@@ -94,6 +106,7 @@ render() {
         </header>
         <Controls toggleSplash={this.toggleSplash}
                   filterTeaByMood={this.filterTeaByMood}
+                  teas={this.state.teaData}
                   moods={this.state.moodData}
                   updateCaffeineFilter={this.updateCaffeineFilter}
                   selectedTeas={this.state.userSelectedTeas}
