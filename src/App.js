@@ -14,7 +14,7 @@ export default class App extends Component {
       userSelectedTeas: [],
       userSelectedMood: '',
       caffeineLevel: '',
-      moodId: 0,
+      moodId: 0
     };
   }
 
@@ -43,6 +43,7 @@ filterTeaByMood = (descriptor) => {
     this.setState({
       userSelectedMood: 'thirsty',
       moodId: 0,
+      caffeineLevel: ''
     });
   } else {
     let matchingMood = this.state.moodData.filter((mood) => {
@@ -51,6 +52,7 @@ filterTeaByMood = (descriptor) => {
     this.setState({
       userSelectedMood: descriptor,
       moodId: matchingMood[0].moodId,
+      caffeineLevel: ''
     });
   }
 }
@@ -71,11 +73,16 @@ getFilteredTeas() {
   if (this.state.userSelectedMood === 'thirsty') {
     let userSelectedTeas = this.state.teaData.map((tea) => {
       return tea;
-    })
+    });
+    if (this.state.caffeineLevel !== '') {
+      userSelectedTeas = userSelectedTeas.filter((tea) => {
+        return tea.caffeine === this.state.caffeineLevel;
+      })
+    }
     return userSelectedTeas;
   } else {
-    let userSelectedTeas = this.state.teaData.filter((currentTea) => {
-      return this.state.moodId === currentTea.moodId;
+    let userSelectedTeas = this.state.teaData.filter((tea) => {
+      return this.state.moodId === tea.moodId;
     });
     if (this.state.caffeineLevel !== '') {
       userSelectedTeas = userSelectedTeas.filter((tea) => {

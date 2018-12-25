@@ -14,6 +14,7 @@ export default class TeaCard extends Component {
       toggleExpand: !this.state.toggleExpand
     })
   }
+  
   render() {
     if(this.state.toggleExpand) {
     return (
