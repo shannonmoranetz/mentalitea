@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import './styles/Main.scss';
 import { ReactComponent as Cup } from './styles/images/cup.svg'
+
+
 export default class Splash extends Component {
   constructor() {
     super();
     this.state = {
-      selectedMood: ''
+      selectedMood: '',
+      buttonText: 'Show All'
     };
   }
 
+
+
 changeUserSelectedMood = (event) => {
     this.setState({
-      selectedMood: event.target.value
+      selectedMood: event.target.value,
+      buttonText: 'Brew Tea'
     })
   }
 
@@ -36,7 +42,7 @@ render() {
         
       </select>
       <Cup />
-      <button onClick={this.updateUserSelectedMood}>Brew-Tea</button>
+      <button onClick={this.updateUserSelectedMood}>{this.state.buttonText}</button>
         </div>
     </div>
   );
