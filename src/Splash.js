@@ -12,8 +12,6 @@ export default class Splash extends Component {
     };
   }
 
-
-
 changeUserSelectedMood = (event) => {
     this.setState({
       selectedMood: event.target.value,

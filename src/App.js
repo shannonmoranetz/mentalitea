@@ -106,7 +106,7 @@ render() {
                 buttonText={this.state.buttonText}/>
       </div>
     );
-  }else {
+  } else {
     return (
       <div className="App">
         <header>
