@@ -6,12 +6,14 @@ export default class Controls extends Component {
     super();
     this.state = {
       selectedMood: '',
+      buttonText: 'Show All'
     }
   }
 
   changeUserSelectedMood = (event) => {
     this.setState({
-      selectedMood: event.target.value
+      selectedMood: event.target.value,
+      buttonText: 'Brew Tea'
     });
   }
 
@@ -41,7 +43,7 @@ export default class Controls extends Component {
               })
             }
           </select>
-          <button className="rebrew-tea" onClick={this.updateUserSelectedMood}>Brew-Tea</button>
+          <button className="rebrew-tea" onClick={this.updateUserSelectedMood}>{this.state.buttonText}</button>
       </div>
     );
   }
