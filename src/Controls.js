@@ -18,7 +18,7 @@ export default class Controls extends Component {
   }
 
   updateUserSelectedMood = () => {
-    this.props.filterTeaByMood(this.state.selectedMood)
+    this.props.getMoodFromDescriptor(this.state.selectedMood)
   }
 
   findCaffeineLevel = (newlevel) => {
