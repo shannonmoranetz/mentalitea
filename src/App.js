@@ -38,7 +38,7 @@ export default class App extends Component {
       .catch(error => console.log(error));
   }
 
-filterTeaByMood = (descriptor) => {
+getMoodFromDescriptor = (descriptor) => {
   if (descriptor === '') {
     this.setState({
       userSelectedMood: 'thirsty',
@@ -69,7 +69,7 @@ updateCaffeineFilter = (caffeineLevel) => {
   });
 }
 
-getFilteredTeas() {
+getTeasFromMood() {
   if (this.state.userSelectedMood === 'thirsty') {
     let userSelectedTeas = this.state.teaData.map((tea) => {
       return tea;
@@ -100,7 +100,7 @@ render() {
         <header>
           <Title className="title" />
         </header>
-        <Splash filterTeaByMood={this.filterTeaByMood}
+        <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
                 moods={this.state.moodData}
                 toggleSplash={this.toggleSplash}
                 buttonText={this.state.buttonText}/>
@@ -113,14 +113,14 @@ render() {
           <Title className="title" />
         </header>
         <Controls toggleSplash={this.toggleSplash}
-                  filterTeaByMood={this.filterTeaByMood}
+                  getMoodFromDescriptor={this.getMoodFromDescriptor}
                   teas={this.state.teaData}
                   moods={this.state.moodData}
                   updateCaffeineFilter={this.updateCaffeineFilter}
                   selectedTeas={this.state.userSelectedTeas}
                   updateDescriptor={this.updateDescriptor} 
                   buttonText={this.state.buttonText}/>
-        <TeaList userSelectedTea={this.getFilteredTeas()}
+        <TeaList userSelectedTea={this.getTeasFromMood()}
                  userSelectedMood={this.state.userSelectedMood}/>
       </div>
     )
