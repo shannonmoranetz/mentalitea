@@ -30,7 +30,7 @@ $ npm start
 MentialiTea was built using ReactJS, and tested using Jest and Enyzme. The project incorporates class and functional components, along SASS styling for visualization. MentaliTea was created over a 2 week period as a 3-person group project in Module 2 of the Front-End Engineering program at Turing School of Software and Design. 
 
 ### Wireframe:
-![Wireframe](https://i.imgur.com/ND4XIS4.png https://i.imgur.com/wM4IPAx.png  "Wireframe")
+![Wireframe](https://i.imgur.com/ND4XIS4.png "Wireframe")
 
 ### Link to Retro Log:
 [Retro Log](https://github.com/shannonmoranetz/mentalitea/issues/10)
