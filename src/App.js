@@ -96,31 +96,35 @@ render() {
   if (this.state.renderSplashPage) {
     return (
       <div className="App"> 
-        <header>
+        <header className="heading-container">
           <Title className="title" />
         </header>
-        <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
-                moods={this.state.moodData}
-                toggleSplash={this.toggleSplash}
-                buttonText={this.state.buttonText}/>
+        <section className="content-container">
+          <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
+                  moods={this.state.moodData}
+                  toggleSplash={this.toggleSplash}
+                  buttonText={this.state.buttonText}/>
+        </section>
       </div>
     );
   } else {
     return (
       <div className="App">
-        <header>
+        <header className="heading-container">
           <Title className="title" />
         </header>
-        <Controls toggleSplash={this.toggleSplash}
-                  getMoodFromDescriptor={this.getMoodFromDescriptor}
-                  teas={this.state.teaData}
-                  moods={this.state.moodData}
-                  updateCaffeineFilter={this.updateCaffeineFilter}
-                  selectedTeas={this.state.userSelectedTeas}
-                  updateDescriptor={this.updateDescriptor} 
-                  buttonText={this.state.buttonText}/>
-        <TeaList userSelectedTea={this.getTeasFromMood()}
-                 userSelectedMood={this.state.userSelectedMood}/>
+        <section className="content-container">
+          <Controls toggleSplash={this.toggleSplash}
+                    getMoodFromDescriptor={this.getMoodFromDescriptor}
+                    teas={this.state.teaData}
+                    moods={this.state.moodData}
+                    updateCaffeineFilter={this.updateCaffeineFilter}
+                    selectedTeas={this.state.userSelectedTeas}
+                    updateDescriptor={this.updateDescriptor} 
+                    buttonText={this.state.buttonText}/>
+          <TeaList userSelectedTea={this.getTeasFromMood()}
+                  userSelectedMood={this.state.userSelectedMood}/>
+        </section>
       </div>
     )
   }

@@ -1,15 +1,27 @@
 
-
 body {
-  text-align: center;
   background-image: url("images/app-background.jpg");
   background-size: cover;
 }
 
-header {
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: 
+  "header"
+  "content";
+}
+
+.heading-container {
   padding: 1px;
   animation: head 5s forwards;
   animation-delay: 3s;
+  grid-area: "header";
+}
+
+.content-container {
+  grid-area: "content";
 }
 
 .title {
