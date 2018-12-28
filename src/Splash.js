@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/Main.scss';
 import { ReactComponent as Cup } from './styles/images/cup.svg';
 import { ReactComponent as SelectMood } from './styles/images/selectMood.svg';
+import { ReactComponent as Arrow } from './styles/images/arrow.svg';
 
 
 export default class Splash extends Component {
@@ -49,9 +50,13 @@ render() {
           
         </select>
       </div>
+      <Arrow className="arrow"/>
       <div className="cup-container">
         <Cup className="cup"/>
-        <button onClick={this.returnTeaListResults}>{this.state.buttonText}</button>
+        <button onClick={this.returnTeaListResults}>
+          {this.state.buttonText}
+          <img src={ require('./styles/images/tea-spill.png') }/>
+        </button>
       </div>
     </div>
   );

@@ -27,6 +27,7 @@
 }
 
 .user-selected-mood {
+  z-index: 2;
   position: absolute;
   top: 50%;
   left: 20%;
@@ -42,10 +43,23 @@
       background: none;
       border: none;
       z-index: 2;
-      position: absolute;
-      left: 95px;
-      bottom: 50px; 
-    }
+      position: relative;
+      left: -165px;
+      bottom: 70px;
+  }
+      img {
+        z-index: -1;
+        position: absolute;
+        display: none;
+        top: -60px;
+        left: -40px;
+        opacity: 0.6;
+        width: 200%;
+        height: 600%;
+      }
+      &:hover img {
+        display: inline-block;
+      }
 }
 
 option {
@@ -58,9 +72,17 @@ option {
 }
 
 .select-mood {
+  z-index: 1;
   fill: none;
   stroke: none;
   animation: splash 5s forwards;
+}
+
+.arrow {
+  position: absolute;
+  right: 35%;
+  top: 30%;
+  animation: splash 5s forwards
 }
 
 
