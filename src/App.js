@@ -121,7 +121,7 @@ render() {
                     moods={this.state.moodData}
                     updateCaffeineFilter={this.updateCaffeineFilter}
                     selectedTeas={this.state.userSelectedTeas}
-                    updateDescriptor={this.updateDescriptor} 
+                    updateDescriptor={this.updateDescriptor} // maybe dont need
                     buttonText={this.state.buttonText}/>
           <TeaList userSelectedTea={this.getTeasFromMood()}
                   userSelectedMood={this.state.userSelectedMood}/>
