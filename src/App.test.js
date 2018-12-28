@@ -18,7 +18,9 @@ it('should have the proper default state', () => {
     teaData: [],
     moodData: [],
     userSelectedTeas: [],
-    userSelectedMood: ''
+    userSelectedMood: '',
+    caffeineLevel: '',
+    moodId: 0
   })
 })
 
