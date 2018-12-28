@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './styles/Main.scss';
-import { ReactComponent as Cup } from './styles/images/cup.svg'
+import { ReactComponent as Cup } from './styles/images/cup.svg';
+import { ReactComponent as SelectMood } from './styles/images/selectMood.svg';
 
 
 export default class Splash extends Component {
@@ -27,7 +28,15 @@ returnTeaListResults = () => {
 render() {
   return (
     <div className="splash-page-container">
-      <div className="splash-page">
+      <p>
+        Instructions<br/>
+          - select how your feeling<br/>
+          - click on brew tea after selection<br/>
+          - click on the tea that sounds amazing to you <br/>
+          - buy the tea
+      </p>
+      <div className="select-mood-content">
+        <SelectMood className="select-mood"/>
         <select className="user-selected-mood" onChange={this.setUserSelectedMood}>
           <option>Select your mood</option>
           {
@@ -39,12 +48,11 @@ render() {
           }
           
         </select>
-        <div className="cup-container">
-          <Cup className="cup"/>
-          <button onClick={this.returnTeaListResults}>{this.state.buttonText}</button>
-       </div>
       </div>
-
+      <div className="cup-container">
+        <Cup className="cup"/>
+        <button onClick={this.returnTeaListResults}>{this.state.buttonText}</button>
+      </div>
     </div>
   );
 }
