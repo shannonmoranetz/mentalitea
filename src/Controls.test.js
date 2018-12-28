@@ -1,17 +1,32 @@
-// import React from 'react';
-// import Controls from './Controls';
-// import { shallow } from 'enzyme';
+import React from 'react';
+import Controls from './Controls';
+import { shallow } from 'enzyme';
 
-// describe('Controls', () => {
-//   let wrapper;
+const moods = [{
+  mood: "Stressed",
+  descriptors: [
+    "agitated",
+    "on-edge",
+    "worried",
+    "tense"
+  ],
+  moodId: 1
+}];
 
-//   beforeEach(() => {
-//     wrapper = shallow(
-//       );
-//   });
+describe('Controls', () => {
+  let wrapper;
 
-//   it('should ', () => {
+  beforeEach(() => {
+    wrapper = shallow(
+      <Controls moods={moods}/>
+      );
+  });
 
-//   });
+  it('should start off with the correct default states ', () => {
+    expect(wrapper.state()).toEqual({
+      selectedMood: '',
+      buttonText: 'Show All'
+    })
+  });
 
-// });
+});
