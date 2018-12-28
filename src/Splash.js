@@ -12,15 +12,15 @@ export default class Splash extends Component {
     };
   }
 
-changeUserSelectedMood = (event) => {
+setUserSelectedMood = (event) => {
     this.setState({
       selectedMood: event.target.value,
       buttonText: 'Brew Tea'
     })
   }
 
-updateUserSelectedMood = () => {
-  this.props.filterTeaByMood(this.state.selectedMood)
+returnTeaListResults = () => {
+  this.props.getMoodFromDescriptor(this.state.selectedMood)
   this.props.toggleSplash()
 }
 
@@ -44,6 +44,7 @@ render() {
           <button onClick={this.updateUserSelectedMood}>{this.state.buttonText}</button>
        </div>
       </div>
+
     </div>
   );
 }
