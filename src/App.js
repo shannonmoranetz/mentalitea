@@ -74,23 +74,22 @@ getTeasFromMood() {
     let userSelectedTeas = this.state.teaData.map((tea) => {
       return tea;
     });
-    if (this.state.caffeineLevel !== '') {
-      userSelectedTeas = userSelectedTeas.filter((tea) => {
-        return tea.caffeine === this.state.caffeineLevel;
-      })
-    }
-    return userSelectedTeas;
+    return this.filterTeasByCaffeine(userSelectedTeas);
   } else {
     let userSelectedTeas = this.state.teaData.filter((tea) => {
       return this.state.moodId === tea.moodId;
     });
-    if (this.state.caffeineLevel !== '') {
-      userSelectedTeas = userSelectedTeas.filter((tea) => {
-        return tea.caffeine === this.state.caffeineLevel;
-      })
-    }
-    return userSelectedTeas;
+    return this.filterTeasByCaffeine(userSelectedTeas);
   }
+}
+
+filterTeasByCaffeine(userSelectedTeas) {
+  if (this.state.caffeineLevel !== '') {
+    userSelectedTeas = userSelectedTeas.filter((tea) => {
+      return tea.caffeine === this.state.caffeineLevel;
+    })
+  }
+  return userSelectedTeas;
 }
 
 render() {
