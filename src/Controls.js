@@ -26,9 +26,9 @@ export default class Controls extends Component {
   }
 
   render() {
-    let levels = ['none', 'low', 'moderate', 'high']
+    let levels = ['None', 'Low', 'Moderate', 'High']
     let buttons = levels.map((level) => {
-      return <button onClick={() => this.findCaffeineLevel({ level })}>{level.charAt(0).toUpperCase() + level.slice(1)}</button>
+      return <button onClick={() => this.findCaffeineLevel({level})}>{level}</button>
     }) 
     return (
       <div className="controls-container">
