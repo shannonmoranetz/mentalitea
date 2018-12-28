@@ -98,6 +98,7 @@ render() {
       <div className="App"> 
         <header className="heading-container">
           <Title className="title" />
+          <h2 className="subtitle">Find the perfect tea for your state of mind.</h2>
         </header>
         <section className="content-container">
           <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
