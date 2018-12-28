@@ -3,14 +3,56 @@
   justify-content: center;
 }
 
-
-
 .splash-page {
   width: 500px;
   height: 100px;
-  border: solid black 2px;
-  background: green;
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.user-selected-mood {
+  position: absolute;
+}
+
+.cup-container {
+  position: relative;
+  bottom: -175%;
+  right: -30%;
+  width: 600px;
+  height: 200px;
+    button {
+      z-index: 2;
+      position: absolute;
+      left: 95px;
+      bottom: 50px; 
+        &:hover::before {
+          display: block;
+          background-image: url("images/tea-spill.png");
+        }
+    }
+}
+
+.cup {
+  stroke: none;
+  animation: cup 5s forwards;
+}
+
+@keyframes cup {
+  0% {
+      opacity: 1;
+      stroke-dashoffset: -1000;
+      stroke: none;
+  }
+  50% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 1000;
+      stroke: black;
+  }
+  100% {
+      opacity: 1;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 1000;
+      stroke: black;
+  }
 }
