@@ -26,13 +26,14 @@ export default class Controls extends Component {
   }
 
   render() {
+    let levels = ['none', 'low', 'moderate', 'high']
+    let buttons = levels.map((level) => {
+      return <button onClick={() => this.findCaffeineLevel({ level })}>{level.charAt(0).toUpperCase() + level.slice(1)}</button>
+    }) 
     return (
       <div className="controls-container">
           <button className="reset-button" onClick={this.props.toggleSplash}>Reset</button>
-          <button onClick={() => this.findCaffeineLevel('none')}>None</button>
-          <button onClick={() => this.findCaffeineLevel('low')}>Low</button>
-          <button onClick={() => this.findCaffeineLevel('moderate')}>Moderate</button>
-          <button onClick={() => this.findCaffeineLevel('high')}>High</button>
+          {buttons}
           <select className="user-reselected-mood" onChange={this.changeUserSelectedMood}>
             <option>Select your mood</option>
             {
