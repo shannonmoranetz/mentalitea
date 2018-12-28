@@ -18,7 +18,7 @@ export default class TeaCard extends Component {
   render() {
     if(this.state.toggleExpand) {
     return (
-        <li onClick={this.toggleExpandFunction}>
+        <li className='expand-card' onClick={this.toggleExpandFunction}>
           <p className="tea-name">{this.props.filteredTeaList.tea}</p>
         </li>
     )} else {

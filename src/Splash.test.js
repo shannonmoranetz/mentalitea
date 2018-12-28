@@ -2,7 +2,6 @@ import React from 'react';
 import Splash from './Splash';
 import { shallow } from 'enzyme';
 
-const value = 'annoyed';
 const moods = [{
   mood: "Stressed",
   descriptors: [
