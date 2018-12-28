@@ -28,7 +28,7 @@ render() {
   return (
     <div className="splash-page-container">
       <div className="splash-page">
-        <select className="user-selected-mood" onChange={this.changeUserSelectedMood}>
+        <select className="user-selected-mood" onChange={this.setUserSelectedMood}>
           <option>Select your mood</option>
           {
             this.props.moods.reduce((allDescriptors, mood) => {
@@ -41,7 +41,7 @@ render() {
         </select>
         <div className="cup-container">
           <Cup className="cup"/>
-          <button onClick={this.updateUserSelectedMood}>{this.state.buttonText}</button>
+          <button onClick={this.returnTeaListResults}>{this.state.buttonText}</button>
        </div>
       </div>
 
