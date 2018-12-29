@@ -61,18 +61,35 @@
   width: 70px;
   font-size: 12px;
   margin: 2px;
+  border-radius: 5px;
+}
+
+.caffeine-buttons:hover,
+.user-reselected-mood:hover
+ {
+  cursor: pointer;
+  border: 1px solid #7B6568;
+}
+
+.reset-button:hover,
+.rebrew-tea:hover {
+  cursor: pointer;
+  border: 1.5px solid #7B6568;
+  color: #7B6568;
 }
 
 .user-reselected-mood {
   width: 120px;
   font-size: 10px;
+  text-transform: capitalize;
 }
 
 .reset-button,
 .rebrew-tea {
-  width: 80px;
+  width: 84px;
   height: 30px;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 .subheading {
