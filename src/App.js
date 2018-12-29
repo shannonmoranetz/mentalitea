@@ -116,14 +116,18 @@ render() {
           <h2 className="subtitle">Find the perfect tea for your state of mind.</h2>
         </header>
         <section className="content-container">
-          <Controls toggleSplash={this.toggleSplash}
-                    getMoodFromDescriptor={this.getMoodFromDescriptor}
-                    teas={this.state.teaData}
-                    moods={this.state.moodData}
-                    updateCaffeineFilter={this.updateCaffeineFilter}
-                    selectedTeas={this.state.userSelectedTeas}
-                    updateDescriptor={this.updateDescriptor} // maybe dont need
-                    buttonText={this.state.buttonText}/>
+          <div className="content-head-container">
+            <img className="gutter-branch" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
+            <Controls toggleSplash={this.toggleSplash}
+                      getMoodFromDescriptor={this.getMoodFromDescriptor}
+                      teas={this.state.teaData}
+                      moods={this.state.moodData}
+                      updateCaffeineFilter={this.updateCaffeineFilter}
+                      selectedTeas={this.state.userSelectedTeas}
+                      updateDescriptor={this.updateDescriptor} // maybe dont need
+                      buttonText={this.state.buttonText}/>
+            <img className="gutter-branch branch-mirror" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
+          </div>
           <TeaList userSelectedTea={this.getTeasFromMood()}
                   userSelectedMood={this.state.userSelectedMood}/>
         </section>

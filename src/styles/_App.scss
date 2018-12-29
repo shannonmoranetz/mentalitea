@@ -19,6 +19,7 @@ body {
   animation-delay: 3s;
   grid-area: "header";
   font-family: $heading-font;
+  border-bottom: 1.5px solid $dark-tone;
 }
 
 .content-container {
@@ -54,6 +55,22 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+.content-head-container {
+  display: flex;
+  justify-content: center;
+}
+
+.gutter-branch {
+  height: 140px;
+  width: 145px;
+  margin: 30px 85px;
+}
+
+.branch-mirror {
+  transform: scaleX(-1);
+  filter: FlipH;
 }
 
 @keyframes App-logo-spin {

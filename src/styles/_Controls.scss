@@ -3,7 +3,8 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  border: 2px solid $dark-tone;
+  box-shadow: 1px 1px 5px black;
   padding: 10px;
   margin: 10px auto;
   background-color: $secondary-background;
