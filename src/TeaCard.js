@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './styles/Main.scss';
 
 export default class TeaCard extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       toggleExpand: true
     }
@@ -15,11 +15,12 @@ export default class TeaCard extends Component {
     })
   }
   
-  render() {
+  render(props) {
     if(this.state.toggleExpand) {
     return (
         <li className="tea-card" onClick={this.toggleExpandFunction}>
           <h2 className="tea-name">{this.props.filteredTeaList.tea}</h2>
+          <img className="tea-image" src={require(`./styles/images/card-photos/tea-card-${this.props.id}.png`)} alt=""/>
         </li>
     )} else {
       return (

@@ -17,6 +17,7 @@
     font-family: $subheading-font;
     font-weight: 800;
     font-size: 22px;
+    overflow: hidden;
 }
 
 .full-tea-info {
@@ -25,4 +26,9 @@
 
 .tea-name {
 
+}
+
+.tea-image {
+    max-width: 100px;
+    max-height: 100px;
 }

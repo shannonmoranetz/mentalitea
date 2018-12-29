@@ -12,9 +12,9 @@ export default function TeaList(props) {
         {
             props.userSelectedTea.map((tea, index) => {
                 return (
-                    <TeaCard key={index} filteredTeaList={tea}/>
+                    <TeaCard key={index} id={index} filteredTeaList={tea}/>
                 )
-            }) 
+            })
         }
         </ul>
      </div>
