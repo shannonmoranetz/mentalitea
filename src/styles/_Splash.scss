@@ -1,6 +1,14 @@
 .splash-page-container {
-  display: grid;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+    p{
+      position: absolute;
+      left: 2%;
+      top: 5%;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.3);
+    }
 }
 
 .splash-page {
@@ -11,34 +19,74 @@
   align-content: center;
 }
 
-.user-selected-mood {
+.select-mood-content {
   position: absolute;
+  top: 0;
+  left: 55%;
+  transform: translate(-50%, 0)
+}
+
+.user-selected-mood {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 20%;
 }
 
 .cup-container {
-  position: relative;
-  bottom: -175%;
-  right: -30%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
   width: 600px;
   height: 200px;
     button {
+      background: none;
+      border: none;
       z-index: 2;
-      position: absolute;
-      left: 95px;
-      bottom: 50px; 
-        &:hover::before {
-          display: block;
-          background-image: url("images/tea-spill.png");
-        }
-    }
+      position: relative;
+      left: -165px;
+      bottom: 70px;
+  }
+      img {
+        z-index: -1;
+        position: absolute;
+        display: none;
+        top: -60px;
+        left: -40px;
+        opacity: 0.6;
+        width: 200%;
+        height: 600%;
+      }
+      &:hover img {
+        display: inline-block;
+      }
+}
+
+option {
+  text-transform: uppercase;
 }
 
 .cup {
   stroke: none;
-  animation: cup 5s forwards;
+  animation: splash 5s forwards;
 }
 
-@keyframes cup {
+.select-mood {
+  z-index: 1;
+  fill: none;
+  stroke: none;
+  animation: splash 5s forwards;
+}
+
+.arrow {
+  position: absolute;
+  right: 35%;
+  top: 30%;
+  animation: splash 5s forwards
+}
+
+
+@keyframes splash {
   0% {
       opacity: 1;
       stroke-dashoffset: -1000;

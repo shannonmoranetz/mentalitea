@@ -1,7 +1,13 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background-image: url("images/app-background.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .App {
