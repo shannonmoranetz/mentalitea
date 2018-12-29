@@ -33,13 +33,15 @@ export default class Controls extends Component {
     return (
       <div className="controls-container">
         <h2 className="controls-heading">Adjust your tea!</h2>
+        <span className="controls-subheadings">
+        <h3 className="caffeine-subheading subheading">Caffeine Level:</h3>
+        <h3 className="mood-subheading subheading">I'm feeling...</h3>        
+        </span>
         <div className="controls-top">
           <div className="left-nested-options">
-            <h3 className="caffeine-subheading subheading">Caffeine Level:</h3>        
-              {buttons}
+            {buttons}
           </div>
           <div className="right-nested-options">          
-            <h3 className="mood-subheading subheading">I'm feeling...</h3>        
               <select className="user-reselected-mood" onChange={this.changeUserSelectedMood}>
                 <option>Select another mood</option>
                 {
