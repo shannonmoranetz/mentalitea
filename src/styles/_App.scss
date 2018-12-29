@@ -24,6 +24,7 @@ body {
   animation: head 5s forwards;
   animation-delay: 3s;
   grid-area: "header";
+  font-family: $heading-font;
 }
 
 .content-container {
@@ -34,6 +35,10 @@ body {
   stroke-dasharray: 1000;
   animation: title 4s linear forwards;
   stroke: #000000;
+}
+
+.subtitle {
+  margin: 5px;
 }
 
 .App-logo {

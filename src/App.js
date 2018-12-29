@@ -98,6 +98,7 @@ render() {
       <div className="App"> 
         <header className="heading-container">
           <Title className="title" />
+          <h2 className="subtitle">Find the perfect tea for your state of mind.</h2>
         </header>
         <section className="content-container">
           <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
@@ -120,7 +121,6 @@ render() {
                     moods={this.state.moodData}
                     updateCaffeineFilter={this.updateCaffeineFilter}
                     selectedTeas={this.state.userSelectedTeas}
-                    updateDescriptor={this.updateDescriptor} 
                     buttonText={this.state.buttonText}/>
           <TeaList userSelectedTea={this.getTeasFromMood()}
                   userSelectedMood={this.state.userSelectedMood}/>
