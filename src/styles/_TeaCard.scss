@@ -47,6 +47,9 @@
 .image-link-container {
     justify-content: space-between;
     margin-top: 20px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .info-subheading {

@@ -128,7 +128,8 @@ render() {
             <img className="gutter-branch branch-mirror" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
           </div>
           <TeaList userSelectedTea={this.getTeasFromMood()}
-                  userSelectedMood={this.state.userSelectedMood}/>
+                  userSelectedMood={this.state.userSelectedMood}
+                  teas={this.state.teaData}/>
         </section>
       </div>
     )
