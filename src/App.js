@@ -97,7 +97,7 @@ render() {
     return (
       <div className="App"> 
         <header className="heading-container">
-          <Title className="title" />
+          <Title className="title"/>
           <h2 className="subtitle">Find the perfect tea for your state of mind.</h2>
         </header>
         <section className="content-container">
@@ -112,7 +112,7 @@ render() {
     return (
       <div className="App">
         <header className="heading-container">
-          <Title className="title" />
+          <Title className="title" onClick={this.toggleSplash}/>
           <h2 className="subtitle">Find the perfect tea for your state of mind.</h2>
         </header>
         <section className="content-container">
@@ -124,7 +124,6 @@ render() {
                       moods={this.state.moodData}
                       updateCaffeineFilter={this.updateCaffeineFilter}
                       selectedTeas={this.state.userSelectedTeas}
-                      updateDescriptor={this.updateDescriptor} // maybe dont need
                       buttonText={this.state.buttonText}/>
             <img className="gutter-branch branch-mirror" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
           </div>

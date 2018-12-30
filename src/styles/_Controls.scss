@@ -8,13 +8,14 @@
   padding: 10px;
   margin: 10px auto;
   background-color: $secondary-background;
-  font-family: Avenir;
+  font-family: $body-font;
 }
 
 .divider {
   border: 1.1px solid $border;
 }
 
+// Flex Containers
 .controls-top {
   display: flex;
   flex-direction: row;
@@ -48,6 +49,7 @@
   height: 60px;
 }
 
+// Controls Top Section
 .controls-heading {
   font-family: $heading-font;
   text-decoration: underline;
@@ -65,29 +67,16 @@
   border-radius: 5px;
 }
 
-.caffeine-buttons:hover,
-.user-reselected-mood:hover
- {
-  cursor: pointer;
-  border: 1px solid #7B6568;
-}
-
-.reset-button:hover,
-.rebrew-tea:hover {
-  cursor: pointer;
-  border: 1.5px solid #7B6568;
-  color: #7B6568;
-}
-
 .user-reselected-mood {
   width: 120px;
   font-size: 10px;
   text-transform: capitalize;
 }
 
+// Controls Bottom Section
 .reset-button,
 .rebrew-tea {
-  width: 84px;
+  width: 86px;
   height: 30px;
   margin: 0 auto;
   border-radius: 5px;
@@ -113,3 +102,17 @@
   margin: 0 0 0 7px;
 }
 
+// Hover States
+.caffeine-buttons:hover,
+.user-reselected-mood:hover
+ {
+  cursor: pointer;
+  border: 1px solid #7B6568;
+}
+
+.reset-button:hover,
+.rebrew-tea:hover {
+  cursor: pointer;
+  border: 1.5px solid #7B6568;
+  color: #7B6568;
+}
