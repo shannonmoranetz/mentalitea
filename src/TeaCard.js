@@ -46,7 +46,7 @@ export default class TeaCard extends Component {
                   }
               </div>
               <div className="image-link-container">
-                <img className="tea-image-expanded" src={require(`./styles/images/card-photos/tea-card-${this.props.id}.png`)} alt=""/>
+                <img className="tea-image-expanded" src={require(`./styles/images/card-photos/${this.props.id}.png`)} alt=""/>
                 <a className="buy-link" href={this.props.filteredTeaList.link} target="_blank" rel="noopener noreferrer">Buy Now</a>
               </div>
             </div>
