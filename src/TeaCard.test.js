@@ -22,7 +22,8 @@ describe('TeaCard', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <TeaCard filteredTeaList={tea}/>
+      <TeaCard filteredTeaList={tea}
+                        id={tea[0].tea}/>
       );
   });
 

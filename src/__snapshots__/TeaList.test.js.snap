@@ -4,13 +4,19 @@ exports[`teaList should display all tea cards 1`] = `
 <div
   className="tea-list"
 >
-  <h1>
-    Teas for when you're feeling 
-    <span
-      className="selected-descriptor"
-    />
-    :
-  </h1>
+  <div
+    className="tealist-heading-container"
+  >
+    <h1
+      className="tealist-heading"
+    >
+      Teas for when you're feeling 
+      <span
+        className="selected-descriptor"
+      />
+       :
+    </h1>
+  </div>
   <ul>
     <TeaCard
       filteredTeaList={
@@ -27,6 +33,7 @@ exports[`teaList should display all tea cards 1`] = `
           "tea": "Irish Breakfast",
         }
       }
+      id="Irish Breakfast"
       key="0"
     />
     <TeaCard
@@ -44,6 +51,7 @@ exports[`teaList should display all tea cards 1`] = `
           "tea": "Earl Grey Bravo",
         }
       }
+      id="Earl Grey Bravo"
       key="1"
     />
     <TeaCard
@@ -61,6 +69,7 @@ exports[`teaList should display all tea cards 1`] = `
           "tea": "Black Dragon Pearls",
         }
       }
+      id="Black Dragon Pearls"
       key="2"
     />
   </ul>
