@@ -31,36 +31,27 @@
   position: absolute;
   top: 50%;
   left: 20%;
+  animation: option 5s ease-out forwards;
 }
 
 .cup-container {
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  right: -25px;
   width: 600px;
   height: 200px;
-    button {
-      background: none;
-      border: none;
-      z-index: 2;
-      position: relative;
-      left: -165px;
-      bottom: 70px;
-  }
-      img {
-        z-index: -1;
-        position: absolute;
-        display: none;
-        top: -60px;
-        left: -40px;
-        opacity: 0.6;
-        width: 200%;
-        height: 600%;
-      }
-      &:hover img {
-        display: inline-block;
-      }
 }
+
+button {
+  background: none;
+  border: none;
+  z-index: 2;
+  position: relative;
+  left: -415px;
+  bottom: 54px;
+  animation: option 5s ease-out forwards;
+}
+  
 
 option {
   text-transform: uppercase;
@@ -103,4 +94,16 @@ option {
       stroke-dasharray: 1000;
       stroke: black;
   }
+}
+
+@keyframes option {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }

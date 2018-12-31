@@ -53,9 +53,8 @@ render() {
       <Arrow className="arrow"/>
       <div className="cup-container">
         <Cup className="cup"/>
-        <button onClick={this.returnTeaListResults}>
+        <button className="splash-page-button" onClick={this.returnTeaListResults}>
           {this.state.buttonText}
-          <img src={ require('./styles/images/tea-spill.png') }/>
         </button>
       </div>
     </div>
