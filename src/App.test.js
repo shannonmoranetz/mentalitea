@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme'
 
-
 const caffeineLevel = 'high';
+
 
 describe('App', () => {
   let wrapper;
@@ -36,6 +36,17 @@ it('should update renderSplashPage when toggleSplash is called', () => {
 it('should update caffeineLevel when updateCaffeineFilter is called', () => {
   wrapper.instance().updateCaffeineFilter(caffeineLevel);
   expect(wrapper.state('caffeineLevel')).toEqual('high');
-})
+});
+
+// it('should update userSelectedTeas to include all teas if mood is selected', () => {
+//   wrapper.instance().getTeasFromMood(userSelectedMood);
+//   expect(wrapper.state('userSelectedTeas')).toHaveLength(3);
+// })
+
+it('should update the selectedMood if no mood is selected', () => {
+  expect(wrapper.state('userSelectedMood')).toEqual('');
+  wrapper.instance().getMoodFromDescriptor('');
+  expect(wrapper.state('userSelectedMood')).toEqual('thirsty');
+});
 
 }); 
