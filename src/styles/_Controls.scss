@@ -1,18 +1,118 @@
 .controls-container {
-  height: 300px;
-  width: 800px;
-  display: inline;
+  height: 160px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid $dark-tone;
+  box-shadow: 1px 1px 5px black;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: $secondary-background;
+  font-family: $body-font;
 }
 
-.reset-button {
-  display: inline-block;
+.divider {
+  border: 1.1px solid $border;
 }
 
-.rebrew-tea {
-  display: inline-block;
+// Flex Containers
+.controls-top {
+  display: flex;
+  flex-direction: row;
+  margin-top: -25px;
+  justify-content: space-around;
+  height: 60px;
+}
+
+.controls-bottom {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.left-nested-options,
+.right-nested-options {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-nested-options {
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 60px;
+}
+
+// Controls Top Section
+.controls-heading {
+  font-family: $heading-font;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: $border;
+  margin-top: -10px;
+  padding: 6px;
+  font-size: 20px;
+}
+
+.caffeine-buttons {
+  width: 70px;
+  font-size: 12px;
+  margin: 2px;
+  border-radius: 5px;
 }
 
 .user-reselected-mood {
-  display: inline-block;
+  width: 120px;
+  font-size: 10px;
+  text-transform: capitalize;
 }
 
+// Controls Bottom Section
+.reset-button,
+.rebrew-tea {
+  width: 86px;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.subheading {
+  font-size: 14px;
+  font-family: $subheading-font;
+}
+
+.controls-subheadings {
+  display: flex;
+  margin-top: -40px;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.submit-subheading,
+.reset-subheading {
+  font-size: 14px;
+  font-family: $subheading-font;
+  font-weight: bold;
+  margin: 0 0 0 7px;
+}
+
+// Hover States
+.caffeine-buttons:hover,
+.user-reselected-mood:hover
+ {
+  cursor: pointer;
+  border: 1px solid #7B6568;
+}
+
+.reset-button:hover,
+.rebrew-tea:hover {
+  cursor: pointer;
+  border: 1.5px solid #7B6568;
+  color: #7B6568;
+}

@@ -1,16 +1,36 @@
 .tea-list {
-    border: 2px solid black;
-    width: 80%;
+    background-color: $primary-background;
+    width: 85%;
     display: inline-block;
     margin: 10px;
-    height: 330px;
+    height: 692px;
     overflow: scroll;
+    box-shadow: 2px 2px 10px $border;
 }
 
 ul {
   padding-left: 0px;
 }
 
+.tealist-heading-container {
+  background-color: $dark-tone;
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+  padding: 1px;
+  z-index: 2;
+}
+
+.tealist-heading {
+  font-family: $subheading-font;
+  color: #b8aba1;
+}
+
 .selected-descriptor {
-  color: blue;
+  font-family: $heading-font;
+  text-decoration: underline;
+  text-decoration-color: $border;
+  text-decoration-style: dotted;
+  color: $light-tone;
+  text-shadow: 2px 2px 2px black;
 }

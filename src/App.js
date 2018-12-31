@@ -97,14 +97,13 @@ render() {
     return (
       <div className="App"> 
         <header className="heading-container">
-          <Title className="title" />
+          <Title className="title"/>
           <h2 className="subtitle">Find the perfect tea for your state of mind.</h2>
         </header>
         <section className="content-container">
           <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
                   moods={this.state.moodData}
-                  toggleSplash={this.toggleSplash}
-                  buttonText={this.state.buttonText}/>
+                  toggleSplash={this.toggleSplash}/>
         </section>
       </div>
     );
@@ -112,18 +111,23 @@ render() {
     return (
       <div className="App">
         <header className="heading-container">
-          <Title className="title" />
+          <Title className="title" onClick={this.toggleSplash}/>
+          <h2 className="subtitle">Find the perfect tea for your state of mind.</h2>
         </header>
         <section className="content-container">
-          <Controls toggleSplash={this.toggleSplash}
-                    getMoodFromDescriptor={this.getMoodFromDescriptor}
-                    teas={this.state.teaData}
-                    moods={this.state.moodData}
-                    updateCaffeineFilter={this.updateCaffeineFilter}
-                    selectedTeas={this.state.userSelectedTeas}
-                    buttonText={this.state.buttonText}/>
+          <div className="content-head-container">
+            <img className="gutter-branch" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
+            <Controls toggleSplash={this.toggleSplash}
+                      getMoodFromDescriptor={this.getMoodFromDescriptor}
+                      teas={this.state.teaData}
+                      moods={this.state.moodData}
+                      updateCaffeineFilter={this.updateCaffeineFilter}
+                      selectedTeas={this.state.userSelectedTeas}/>
+            <img className="gutter-branch branch-mirror" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
+          </div>
           <TeaList userSelectedTea={this.getTeasFromMood()}
-                  userSelectedMood={this.state.userSelectedMood}/>
+                  userSelectedMood={this.state.userSelectedMood}
+                  teas={this.state.teaData}/>
         </section>
       </div>
     )

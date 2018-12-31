@@ -13,24 +13,27 @@ body {
 .App {
   text-align: center;
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 8fr;
   grid-template-areas: 
   "header"
   "content";
 }
 
+// Grid Areas
 .heading-container {
   padding: 1px;
   animation: head 5s forwards;
   animation-delay: 3s;
   grid-area: "header";
   font-family: $heading-font;
+  border-bottom: 1.5px solid $dark-tone;
 }
 
 .content-container {
   grid-area: "content";
 }
 
+// Header Section
 .title {
   stroke-dasharray: 1000;
   animation: title 4s linear forwards;
@@ -39,6 +42,7 @@ body {
 
 .subtitle {
   margin: 5px;
+  margin-top: -20px;
 }
 
 .App-logo {
@@ -61,6 +65,29 @@ body {
   color: #61dafb;
 }
 
+// Content Section
+.content-head-container {
+  display: flex;
+  justify-content: center;
+}
+
+.gutter-branch {
+  height: 140px;
+  width: 145px;
+  margin: 30px 85px;
+}
+
+.branch-mirror {
+  transform: scaleX(-1);
+  filter: FlipH;
+}
+
+// Hover States
+.title:hover path{
+  fill: $light-tone;
+}
+
+// Animations
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
