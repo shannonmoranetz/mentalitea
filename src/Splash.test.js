@@ -13,12 +13,17 @@ const moods = [{
   moodId: 1
   }];
 
+  const returnTeaListResultsMock = jest.fn();
+
 describe('Splash', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <Splash moods={moods}/>
+      <Splash moods={moods}
+              // getMoodFromDescriptor={getMoodFromDescriptor}
+              // toggleSplash={toggleSplash}
+              />
       );
   });
 
@@ -26,4 +31,10 @@ describe('Splash', () => {
     wrapper.find('.user-selected-mood').simulate('change', {target: {value: 'annoyed'}});
     expect(wrapper.state('selectedMood')).toEqual('annoyed')
   });
+
+  it('should invoke toggleSplash and getMoodFromDescriptor when clicked', () => {
+    wrapper.find('.splash-page-button').simulate('click');
+    expect(returnTeaListResultsMock).toBeCalled();
+  });
+  
 });
