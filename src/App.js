@@ -103,8 +103,7 @@ render() {
         <section className="content-container">
           <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
                   moods={this.state.moodData}
-                  toggleSplash={this.toggleSplash}
-                  buttonText={this.state.buttonText}/>
+                  toggleSplash={this.toggleSplash}/>
         </section>
       </div>
     );
@@ -123,8 +122,7 @@ render() {
                       teas={this.state.teaData}
                       moods={this.state.moodData}
                       updateCaffeineFilter={this.updateCaffeineFilter}
-                      selectedTeas={this.state.userSelectedTeas}
-                      buttonText={this.state.buttonText}/>
+                      selectedTeas={this.state.userSelectedTeas}/>
             <img className="gutter-branch branch-mirror" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
           </div>
           <TeaList userSelectedTea={this.getTeasFromMood()}
