@@ -1,14 +1,14 @@
 .controls-container {
-  height: 160px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
+  background-color: $secondary-background;
   border: 2px solid $dark-tone;
   box-shadow: 1px 1px 5px black;
-  padding: 10px;
-  margin: 10px auto;
-  background-color: $secondary-background;
+  display: flex;
+  flex-direction: column;
   font-family: $body-font;
+  height: 160px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
 }
 
 .divider {
@@ -19,65 +19,65 @@
 .controls-top {
   display: flex;
   flex-direction: row;
-  margin-top: -25px;
-  justify-content: space-around;
   height: 60px;
+  justify-content: space-around;
+  margin-top: -25px;
 }
 
 .controls-bottom {
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
   height: 65px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .left-nested-options,
 .right-nested-options {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   justify-content: space-around;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .left-nested-options {
   flex-direction: row;
-  justify-content: space-around;
   flex-wrap: wrap;
-  width: 150px;
   height: 60px;
+  justify-content: space-around;
+  width: 150px;
 }
 
 // Controls Top Section
 .controls-heading {
   font-family: $heading-font;
-  text-decoration: underline;
-  text-decoration-color: $border;
+  font-size: 20px;
   margin-top: -10px;
   padding: 6px;
-  font-size: 20px;
+  text-decoration-color: $border;
+  text-decoration: underline;
 }
 
 .caffeine-buttons {
-  width: 70px;
+  border-radius: 5px;
   font-size: 12px;
   margin: 2px;
-  border-radius: 5px;
+  width: 70px;
 }
 
 .user-reselected-mood {
-  width: 120px;
   font-size: 10px;
   text-transform: capitalize;
+  width: 120px;
 }
 
 // Controls Bottom Section
 .reset-button {
-  width: 86px;
+  border-radius: 5px;
   height: 30px;
   margin: 0 auto;
-  border-radius: 5px;
+  width: 86px;
 }
 
 .rebrew-tea {
@@ -85,20 +85,20 @@
 }
 
 .subheading {
-  font-size: 14px;
   font-family: $subheading-font;
+  font-size: 14px;
 }
 
 .controls-subheadings {
   display: flex;
-  margin-top: -40px;
   justify-content: space-around;
+  margin-top: -40px;
   padding: 10px;
 }
 
 .submit-subheading {
-  font-size: 14px;
   font-family: $subheading-font;
+  font-size: 14px;
   font-weight: bold;
   margin: 0 0 0 7px;
 }
@@ -119,9 +119,9 @@
 }
 
 .reset-button:hover{
-  cursor: pointer;
   border: 1.5px solid #7B6568;
   color: #7B6568;
+  cursor: pointer;
 }
 
 .rebrew-tea:hover {
