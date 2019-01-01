@@ -28,9 +28,6 @@ ul {
 
 .selected-descriptor {
   font-family: $heading-font;
-  text-decoration: underline;
-  text-decoration-color: $border;
-  text-decoration-style: dotted;
   color: $light-tone;
   text-shadow: 2px 2px 2px black;
 }

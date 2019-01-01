@@ -53,7 +53,6 @@
 .controls-heading {
   font-family: $heading-font;
   text-decoration: underline;
-  text-decoration-style: dotted;
   text-decoration-color: $border;
   margin-top: -10px;
   padding: 6px;
@@ -74,12 +73,15 @@
 }
 
 // Controls Bottom Section
-.reset-button,
-.rebrew-tea {
+.reset-button {
   width: 86px;
   height: 30px;
   margin: 0 auto;
   border-radius: 5px;
+}
+
+.rebrew-tea {
+  @extend .reset-button;
 }
 
 .subheading {
@@ -94,25 +96,34 @@
   padding: 10px;
 }
 
-.submit-subheading,
-.reset-subheading {
+.submit-subheading {
   font-size: 14px;
   font-family: $subheading-font;
   font-weight: bold;
   margin: 0 0 0 7px;
 }
 
+.reset-subheading {
+  @extend .submit-subheading;
+}
+
 // Hover States
-.caffeine-buttons:hover,
-.user-reselected-mood:hover
+.caffeine-buttons:hover
  {
   cursor: pointer;
   border: 1px solid #7B6568;
 }
 
-.reset-button:hover,
-.rebrew-tea:hover {
+.user-reselected-mood:hover {
+  @extend .caffeine-buttons:hover;
+}
+
+.reset-button:hover{
   cursor: pointer;
   border: 1.5px solid #7B6568;
   color: #7B6568;
+}
+
+.rebrew-tea:hover {
+  @extend .reset-button:hover;
 }
