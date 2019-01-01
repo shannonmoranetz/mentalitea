@@ -5,7 +5,7 @@
 
 
 Current Version: 
-![Current Version]()
+![Current Version](https://i.imgur.com/tBcI4Du.png)
 
 ## Getting Started
 
@@ -36,7 +36,9 @@ MentialiTea was built using ReactJS, and tested using Jest and Enyzme. The proje
 [Retro Log](https://github.com/shannonmoranetz/mentalitea/issues/10)
 
 ## Future Development and Extensions Notes:
-
+Additional styling on the expanded cards
+Better quality images for the teas
+Additional teas and moods
 
 ## Original Assignment
 [Whateverly, Mod 2 at the Turing School of Software and Design](http://frontend.turing.io/projects/whateverly.html)
