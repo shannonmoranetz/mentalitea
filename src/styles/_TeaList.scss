@@ -1,11 +1,11 @@
 .tea-list {
     background-color: $primary-background;
-    width: 85%;
+    box-shadow: 2px 2px 10px $border;
     display: inline-block;
     margin: 10px;
     max-height: 600px;
     overflow: scroll;
-    box-shadow: 2px 2px 10px $border;
+    width: 85%;
 }
 
 ul {
@@ -14,23 +14,20 @@ ul {
 
 .tealist-heading-container {
   background-color: $dark-tone;
-  position: sticky;
-  top: 0;
   margin: 0 auto;
   padding: 1px;
+  position: sticky;
+  top: 0;
   z-index: 2;
 }
 
 .tealist-heading {
-  font-family: $subheading-font;
   color: #b8aba1;
+  font-family: $subheading-font;
 }
 
 .selected-descriptor {
-  font-family: $heading-font;
-  text-decoration: underline;
-  text-decoration-color: $border;
-  text-decoration-style: dotted;
   color: $light-tone;
+  font-family: $heading-font;
   text-shadow: 2px 2px 2px black;
 }
