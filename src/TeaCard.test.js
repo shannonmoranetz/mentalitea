@@ -2,7 +2,7 @@ import React from 'react';
 import TeaCard from './TeaCard';
 import { shallow } from 'enzyme';
 
-const tea = [
+const tea = 
   {
     tea: "Irish Breakfast",
     category: "Black",
@@ -14,18 +14,15 @@ const tea = [
       "malty"
     ],
     link: "https://www.adagio.com/black/irish_breakfast.html"
-  },
-];
-
-const toggleExpandFunctionMock = jest.fn();
+  };
 
 describe('TeaCard', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <TeaCard filteredTeaList={tea[0]}
-                        id={tea[0].tea}/>
+      <TeaCard  filteredTeaList={tea}
+                id={tea.tea}/>
       );
   });
 
@@ -39,9 +36,7 @@ describe('TeaCard', () => {
     expect(wrapper.state('toggleExpand')).toEqual(false);
   });
 
-  // it('should expand the card upon being clicked', () => {
-  //   wrapper.find('.tea-card').simulate('click'); 
-  //   expect(toggleExpandFunctionMock).toBeCalled();
-  // })
-
+  it('should display tea card and tea image', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -30,13 +30,17 @@ describe('Splash', () => {
 
   it('should update the user\'s selected mood', () => {
     wrapper.find('.user-selected-mood').simulate('change', {target: {value: 'annoyed'}});
-    expect(wrapper.state('selectedMood')).toEqual('annoyed')
+    expect(wrapper.state('selectedMood')).toEqual('annoyed');
   });
 
   it('should invoke toggleSplash and getMoodFromDescriptor when clicked', () => {
     wrapper.find('.splash-page-button').simulate('click');
     expect(getMoodFromDescriptorMock).toBeCalled();
     expect(toggleSplashMock).toBeCalled();
+  });
+
+  it('should display buttons, instructions, and svgs', () => {
+    expect(wrapper).toMatchSnapshot();
   });
   
 });
