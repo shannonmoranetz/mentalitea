@@ -17,20 +17,18 @@ const tea = [
   },
 ];
 
-const toggleExpandFunctionMock = jest.fn();
-
 describe('TeaCard', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
       <TeaCard filteredTeaList={tea[0]}
-                        id={tea[0].tea}/>
-      );
+        id={tea[0].tea}/>
+    );
   });
 
   it('should have the proper default state', () => {
-    expect(wrapper.state()).toEqual({ toggleExpand: true })
+    expect(wrapper.state()).toEqual({ toggleExpand: true });
   });
 
   it('should update toggleExpand when toggleExpandFunction is called', () => {
@@ -39,9 +37,8 @@ describe('TeaCard', () => {
     expect(wrapper.state('toggleExpand')).toEqual(false);
   });
 
-  // it('should expand the card upon being clicked', () => {
-  //   wrapper.find('.tea-card').simulate('click'); 
-  //   expect(toggleExpandFunctionMock).toBeCalled();
-  // })
+  it('should display tea card and tea image', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
 });

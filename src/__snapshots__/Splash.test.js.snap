@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Splash should display buttons, instructions, and svgs 1`] = `
+<div
+  className="splash-page-container"
+>
+  <div
+    className="instructions-container"
+  >
+    <h2
+      className="instructions-heading"
+    >
+      Instructions
+    </h2>
+    <p
+      className="instructions-body"
+    >
+      <span
+        className="instruction-number"
+      >
+        1)
+      </span>
+       Tell us how you're feeling at this moment.
+    </p>
+    <p
+      className="instructions-body"
+    >
+      <span
+        className="instruction-number"
+      >
+        2)
+      </span>
+       Click the "Brew Tea" button, and we will recommend teas accordingly.
+    </p>
+    <p
+      className="instructions-body"
+    >
+      <span
+        className="instruction-number"
+      >
+        3)
+      </span>
+       Feel free to click a tea to show more information about it.
+    </p>
+    <p
+      className="instructions-body"
+    >
+      <span
+        className="instruction-number"
+      >
+        4)
+      </span>
+       You can make adjustments or select a new mood at any time.
+    </p>
+  </div>
+  <div
+    className="select-mood-content"
+  >
+    <ReactComponent
+      className="select-mood"
+    />
+    <select
+      className="user-selected-mood"
+      onChange={[Function]}
+    >
+      <option>
+        Select your mood
+      </option>
+      <option
+        key="0"
+        value="agitated"
+      >
+        agitated
+      </option>
+      <option
+        key="1"
+        value="on-edge"
+      >
+        on-edge
+      </option>
+      <option
+        key="2"
+        value="worried"
+      >
+        worried
+      </option>
+      <option
+        key="3"
+        value="tense"
+      >
+        tense
+      </option>
+    </select>
+  </div>
+  <div
+    className="cup-container"
+  >
+    <ReactComponent
+      className="cup"
+    />
+    <button
+      className="splash-page-button"
+      onClick={[Function]}
+    >
+      Show All
+    </button>
+  </div>
+</div>
+`;
