@@ -14,20 +14,21 @@ const tea =
       "malty"
     ],
     link: "https://www.adagio.com/black/irish_breakfast.html"
-  };
+  },
+];
 
 describe('TeaCard', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <TeaCard  filteredTeaList={tea}
-                id={tea.tea}/>
-      );
+      <TeaCard filteredTeaList={tea[0]}
+        id={tea[0].tea}/>
+    );
   });
 
   it('should have the proper default state', () => {
-    expect(wrapper.state()).toEqual({ toggleExpand: true })
+    expect(wrapper.state()).toEqual({ toggleExpand: true });
   });
 
   it('should update toggleExpand when toggleExpandFunction is called', () => {

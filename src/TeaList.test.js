@@ -8,51 +8,51 @@ const userSelectedTeas = [{
   moodId: 5,
   caffeine: "high",
   tastes: [
-  "citrus",
-  "spice",
-  "malty"
+    "citrus",
+    "spice",
+    "malty"
   ],
   link: "https://www.adagio.com/black/irish_breakfast.html"
-  },
-  {
+},
+{
   tea: "Earl Grey Bravo",
   category: "Black",
   moodId: 5,
   caffeine: "high",
   tastes: [
-  "citrus",
-  "zesty",
-  "sweet"
+    "citrus",
+    "zesty",
+    "sweet"
   ],
   link: "https://www.adagio.com/black/earl_grey_bravo.html"
-  },
-  {
+},
+{
   tea: "Black Dragon Pearls",
   category: "Black",
   moodId: 5,
   caffeine: "high",
   tastes: [
-  "chocolate",
-  "sweet",
-  "earthy"
+    "chocolate",
+    "sweet",
+    "earthy"
   ],
   link: "https://www.adagio.com/black/black_dragon_pearls.html"
-  }];
+}];
 
-  const userSelectedMood = [];
+const userSelectedMood = [];
 
-  describe('teaList', () => {
-    let wrapper;
+describe('teaList', () => {
+  let wrapper;
 
-    beforeEach(() => {
-      wrapper = shallow(
-        <TeaList userSelectedTea={userSelectedTeas}
-                 userSelectedMood={userSelectedMood}
-        />);
-    });
-
-    it('should display all tea cards', () => {
-      expect(wrapper).toMatchSnapshot();
-    });
-
+  beforeEach(() => {
+    wrapper = shallow(
+      <TeaList userSelectedTea={userSelectedTeas}
+        userSelectedMood={userSelectedMood}
+      />);
   });
+
+  it('should display all tea cards', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+});

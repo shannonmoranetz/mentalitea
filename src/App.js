@@ -1,9 +1,11 @@
+/* eslint-disable no-console */
 import React, { Component } from 'react';
 import './styles/Main.scss';
 import Controls from './Controls.js';
 import Splash from './Splash.js';
 import TeaList from './TeaList.js';
-import { ReactComponent as Title } from './styles/images/title.svg'
+import { ReactComponent as Title } from './styles/images/title.svg';
+
 export default class App extends Component {
   constructor() {
     super();
@@ -48,6 +50,7 @@ getMoodFromDescriptor = (descriptor) => {
     let matchingMood = this.state.moodData.filter((mood) => {
       return mood.descriptors.includes(descriptor);
     });
+
     this.setState({
       userSelectedMood: descriptor,
       moodId: matchingMood[0].moodId,
@@ -64,7 +67,7 @@ toggleSplash = () => {
 
 updateCaffeineFilter = (caffeineLevel) => {
   this.setState({
-    caffeineLevel: caffeineLevel
+    caffeineLevel
   });
 }
 
@@ -73,11 +76,13 @@ getTeasFromMood() {
     let userSelectedTeas = this.state.teaData.map((tea) => {
       return tea;
     });
+
     return this.filterTeasByCaffeine(userSelectedTeas);
   } else {
     let userSelectedTeas = this.state.teaData.filter((tea) => {
       return this.state.moodId === tea.moodId;
     });
+
     return this.filterTeasByCaffeine(userSelectedTeas);
   }
 }
@@ -86,7 +91,7 @@ filterTeasByCaffeine(userSelectedTeas) {
   if (this.state.caffeineLevel !== '') {
     userSelectedTeas = userSelectedTeas.filter((tea) => {
       return tea.caffeine === this.state.caffeineLevel;
-    })
+    });
   }
   return userSelectedTeas;
 }
@@ -101,8 +106,8 @@ render() {
         </header>
         <section className="content-container">
           <Splash getMoodFromDescriptor={this.getMoodFromDescriptor}
-                  moods={this.state.moodData}
-                  toggleSplash={this.toggleSplash}/>
+            moods={this.state.moodData}
+            toggleSplash={this.toggleSplash}/>
         </section>
       </div>
     );
@@ -117,18 +122,18 @@ render() {
           <div className="content-head-container">
             <img className="gutter-branch" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
             <Controls toggleSplash={this.toggleSplash}
-                      getMoodFromDescriptor={this.getMoodFromDescriptor}
-                      teas={this.state.teaData}
-                      moods={this.state.moodData}
-                      updateCaffeineFilter={this.updateCaffeineFilter}/>
+              getMoodFromDescriptor={this.getMoodFromDescriptor}
+              teas={this.state.teaData}
+              moods={this.state.moodData}
+              updateCaffeineFilter={this.updateCaffeineFilter}/>
             <img className="gutter-branch branch-mirror" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
           </div>
           <TeaList userSelectedTea={this.getTeasFromMood()}
-                  userSelectedMood={this.state.userSelectedMood}
-                  teas={this.state.teaData}/>
+            userSelectedMood={this.state.userSelectedMood}
+            teas={this.state.teaData}/>
         </section>
       </div>
-    )
+    );
   }
 }
 }

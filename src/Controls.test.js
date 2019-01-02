@@ -13,10 +13,8 @@ const moods = [{
   moodId: 1
 }];
 
-
 const getMoodFromDescriptorMock = jest.fn();
 const updateCaffeineFilterMock = jest.fn();
-
 
 describe('Controls', () => {
   let wrapper;
@@ -24,16 +22,16 @@ describe('Controls', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Controls moods={moods}
-                getMoodFromDescriptor={getMoodFromDescriptorMock}
-                updateCaffeineFilter={updateCaffeineFilterMock}/>
-      );
+        getMoodFromDescriptor={getMoodFromDescriptorMock}
+        updateCaffeineFilter={updateCaffeineFilterMock}/>
+    );
   });
 
   it('should start off with the correct default states ', () => {
     expect(wrapper.state()).toEqual({
       selectedMood: '',
       buttonText: 'Show All'
-    })
+    });
   });
 
   it('should invoke the updateUserSelectedMood method when clicked', () => {
@@ -51,5 +49,4 @@ describe('Controls', () => {
     expect(wrapper.state('selectedMood')).toEqual('sad');
     expect(wrapper.state('buttonText')).toEqual('Brew Tea');
   });
-
 });

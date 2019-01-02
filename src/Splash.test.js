@@ -5,13 +5,13 @@ import { shallow } from 'enzyme';
 const moods = [{
   mood: "Stressed",
   descriptors: [
-  "agitated",
-  "on-edge",
-  "worried",
-  "tense"
+    "agitated",
+    "on-edge",
+    "worried",
+    "tense"
   ],
   moodId: 1
-  }];
+}];
 
 const getMoodFromDescriptorMock = jest.fn();
 const toggleSplashMock = jest.fn();
@@ -22,10 +22,10 @@ describe('Splash', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Splash moods={moods}
-              getMoodFromDescriptor={getMoodFromDescriptorMock}
-              toggleSplash={toggleSplashMock}
-              />
-      );
+        getMoodFromDescriptor={getMoodFromDescriptorMock}
+        toggleSplash={toggleSplashMock}
+      />
+    );
   });
 
   it('should update the user\'s selected mood', () => {
