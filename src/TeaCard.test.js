@@ -2,7 +2,7 @@ import React from 'react';
 import TeaCard from './TeaCard';
 import { shallow } from 'enzyme';
 
-const tea = [
+const tea = 
   {
     tea: "Irish Breakfast",
     category: "Black",
@@ -40,5 +40,4 @@ describe('TeaCard', () => {
   it('should display tea card and tea image', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
 });

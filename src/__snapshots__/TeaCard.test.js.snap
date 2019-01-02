@@ -17,3 +17,4 @@ exports[`TeaCard should display tea card and tea image 1`] = `
   />
 </li>
 `;
+

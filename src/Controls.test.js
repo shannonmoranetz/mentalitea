@@ -49,5 +49,4 @@ describe('Controls', () => {
     expect(wrapper.state('selectedMood')).toEqual('sad');
     expect(wrapper.state('buttonText')).toEqual('Brew Tea');
   });
-
 });
