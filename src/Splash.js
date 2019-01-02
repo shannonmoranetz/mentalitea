@@ -28,13 +28,13 @@ returnTeaListResults = () => {
 render() {
   return (
     <div className="splash-page-container">
-      <p>
-        Instructions<br/>
-          - select how your feeling<br/>
-          - click on brew tea after selection<br/>
-          - click on the tea that sounds amazing to you <br/>
-          - buy the tea
-      </p>
+      <div className="instructions-container">
+        <h2 className="instructions-heading">Instructions</h2>
+          <p className="instructions-body"><span className="instruction-number">1)</span> Tell us how you're feeling at this moment.</p>
+          <p className="instructions-body"><span className="instruction-number">2)</span> Click the "Brew Tea" button, and we will recommend teas accordingly.</p>
+          <p className="instructions-body"><span className="instruction-number">3)</span> Feel free to click a tea to show more information about it.</p>
+          <p className="instructions-body"><span className="instruction-number">4)</span> You can make adjustments or select a new mood at any time.</p>
+      </div>
       <div className="select-mood-content">
         <SelectMood className="select-mood"/>
         <select className="user-selected-mood" onChange={this.setUserSelectedMood}>
