@@ -20,7 +20,7 @@ export default class TeaCard extends Component {
       return (
         <li className="tea-card" onClick={this.toggleExpandFunction}>
           <h2 className="tea-name-unexpanded">{this.props.filteredTeaList.tea}</h2>
-          <img className="tea-image-unexpanded" src={require(`./styles/images/card-photos/${this.props.teaName}.png`)} alt=""/>
+          <img className="tea-image-unexpanded" src={require(`./styles/images/card-photos/${this.props.filteredTeaList.tea}.png`)} alt=""/>
         </li>
       );
 } else {
@@ -47,7 +47,7 @@ export default class TeaCard extends Component {
               }
             </div>
             <div className="image-link-container">
-              <img className="tea-image-expanded" src={require(`./styles/images/card-photos/${this.props.teaName}.png`)} alt=""/>
+              <img className="tea-image-expanded" src={require(`./styles/images/card-photos/${this.props.filteredTeaList.tea}.png`)} alt=""/>
               <a className="buy-link" href={this.props.filteredTeaList.link} target="_blank" rel="noopener noreferrer">Buy Now</a>
             </div>
           </div>
