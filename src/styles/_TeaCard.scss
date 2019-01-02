@@ -29,14 +29,13 @@
 }
 
 .tea-image-unexpanded {
-  /* abc */
+    clip-path: polygon(0 18%, 100% 18%, 100% 50%, 0 50%);
+    max-height: 300px;
+    max-width: 300px;
+    overflow: hidden;
     position: absolute;
     right: 0px;
     top: -61px;
-    clip-path: polygon(0 18%, 100% 18%, 100% 50%, 0 50%);
-    max-width: 300px;
-    max-height: 300px;
-    overflow: hidden;
 }
 
 // Expanded Card View

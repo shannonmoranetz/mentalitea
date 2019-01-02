@@ -5,7 +5,7 @@
 
 
 Current Version: 
-![Current Version](https://i.imgur.com/tBcI4Du.png)
+![Current Version](https://i.imgur.com/wu8VrCX.png)
 
 ## Getting Started
 
