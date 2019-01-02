@@ -11,7 +11,6 @@ export default class App extends Component {
       renderSplashPage: true,
       teaData: [],
       moodData: [],
-      userSelectedTeas: [],
       userSelectedMood: '',
       caffeineLevel: '',
       moodId: 0
@@ -121,8 +120,7 @@ render() {
                       getMoodFromDescriptor={this.getMoodFromDescriptor}
                       teas={this.state.teaData}
                       moods={this.state.moodData}
-                      updateCaffeineFilter={this.updateCaffeineFilter}
-                      selectedTeas={this.state.userSelectedTeas}/>
+                      updateCaffeineFilter={this.updateCaffeineFilter}/>
             <img className="gutter-branch branch-mirror" src={require(`./styles/images/gutter-branch.png`)} alt=""/>
           </div>
           <TeaList userSelectedTea={this.getTeasFromMood()}

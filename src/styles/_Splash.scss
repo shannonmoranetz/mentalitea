@@ -1,31 +1,31 @@
 .splash-page-container {
+  height: 100%;
   position: relative;
   width: 100%;
-  height: 100%;
     .instructions-container{
-      position: absolute;
-      left: 4%;
-      top: 5%;
-      text-align: left;
-      width: 400px;
-      padding-left: 10px;
       background: rgba(255, 255, 255, 0.3);
+      left: 4%;
+      padding-left: 10px;
+      position: absolute;
+      text-align: left;
+      top: 5%;
+      width: 400px;
     }
 }
 
 .splash-page {
-  width: 500px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
   align-content: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 500px;
 }
 
 .instructions-heading {
   font-family: $heading-font;
-  text-decoration: underline;
-  text-decoration-color: $border;
   text-align: center;
+  text-decoration-color: $border;
+  text-decoration: underline;
 }
 
 .instructions-body {
@@ -39,36 +39,36 @@
 }
 
 .select-mood-content {
+  left: 55%;
   position: absolute;
   top: 0;
-  left: 55%;
-  transform: translate(-50%, 0)
+  transform: translate(-50%, 0);
 }
 
 .user-selected-mood {
-  z-index: 2;
+  animation: option 5s ease-out forwards;
+  left: 20%;
   position: absolute;
   top: 50%;
-  left: 20%;
-  animation: option 5s ease-out forwards;
+  z-index: 2;
 }
 
 .cup-container {
-  position: absolute;
-  top: 165px;
-  right: -25px;
-  width: 600px;
   height: 200px;
+  position: absolute;
+  right: -25px;
+  top: 165px;
+  width: 600px;
 }
 
 .splash-page-button {
+  animation: option 5s ease-out forwards;
   background: none;
   border: none;
-  z-index: 2;
-  position: relative;
-  left: -415px;
   bottom: 54px;
-  animation: option 5s ease-out forwards;
+  left: -415px;
+  position: relative;
+  z-index: 2;
 }
   
 
@@ -77,27 +77,27 @@ option {
 }
 
 .cup {
-  stroke: none;
   animation: splash 5s forwards;
+  stroke: none;
 }
 
 .select-mood {
-  z-index: 1;
+  animation: splash 5s forwards;
   fill: none;
   stroke: none;
-  animation: splash 5s forwards;
+  z-index: 1;
 }
 
 .arrow {
+  animation: splash 5s forwards;
   position: absolute;
   right: 35%;
   top: 30%;
-  animation: splash 5s forwards
 }
 
 .button-svg {
-  animation: button 2s infinite;
   animation-delay: 3.5s;
+  animation: button 2s infinite;
 }
 
 
