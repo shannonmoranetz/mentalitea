@@ -41,8 +41,8 @@
 .select-mood-content {
   left: 55%;
   position: absolute;
-  top: 0;
-  transform: translate(-50%, 0);
+  top: 30px;
+  transform: translate(-50%, 0) scale(1.5);
 }
 
 .user-selected-mood {
@@ -57,8 +57,9 @@
 .cup-container {
   height: 200px;
   position: absolute;
-  right: -25px;
-  top: 165px;
+  right: 30%;
+  top: 225px;
+  transform: translate(50%, 0) scale(1.5);
   width: 600px;
 }
 
@@ -97,8 +98,8 @@ option {
 }
 
 .button-svg {
-  animation-delay: 3.5s;
   animation: button 2s infinite;
+  animation-delay: 3.5s;
 }
 
 
@@ -136,11 +137,13 @@ option {
 @keyframes button {
   0% {
     stroke-width: 1px;
+    fill: #ffffff;
   }
   50% {
     stroke-width: 4px;
   }
   100% {
     stroke-width: 1px;
+    fill: #ffffff;
   }
 }
