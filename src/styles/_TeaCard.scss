@@ -11,6 +11,7 @@
 }
 
 .tea-card {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,8 +29,12 @@
 }
 
 .tea-image-unexpanded {
-    max-width: 100px;
-    max-height: 100px;
+    position: absolute;
+    right: 0px;
+    top: -61px;
+    clip-path: polygon(0 18%, 100% 18%, 100% 50%, 0 50%);
+    max-width: 300px;
+    max-height: 300px;
     overflow: hidden;
 }
 
