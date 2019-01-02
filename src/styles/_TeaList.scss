@@ -2,8 +2,8 @@
     background-color: $primary-background;
     box-shadow: 2px 2px 10px $border;
     display: inline-block;
-    height: 692px;
     margin: 10px;
+    max-height: 600px;
     overflow: scroll;
     width: 85%;
 }

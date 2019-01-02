@@ -20,6 +20,7 @@
   justify-content: space-between;
   overflow: hidden;
   padding: 0px 80px;
+  position: relative;
 }
 
 // Unexpanded Card View
@@ -28,9 +29,14 @@
 }
 
 .tea-image-unexpanded {
-  max-height: 100px;
-  max-width: 100px;
-  overflow: hidden;
+  /* abc */
+    position: absolute;
+    right: 0px;
+    top: -61px;
+    clip-path: polygon(0 18%, 100% 18%, 100% 50%, 0 50%);
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
 }
 
 // Expanded Card View

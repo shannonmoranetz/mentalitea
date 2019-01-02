@@ -55,7 +55,7 @@
 
 .cup-container {
   position: absolute;
-  bottom: 0px;
+  top: 165px;
   right: -25px;
   width: 600px;
   height: 200px;
@@ -95,6 +95,11 @@ option {
   animation: splash 5s forwards
 }
 
+.button-svg {
+  animation: button 2s infinite;
+  animation-delay: 3.5s;
+}
+
 
 @keyframes splash {
   0% {
@@ -125,4 +130,16 @@ option {
     100% {
       opacity: 1;
     }
+}
+
+@keyframes button {
+  0% {
+    stroke-width: 1px;
+  }
+  50% {
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-width: 1px;
+  }
 }
