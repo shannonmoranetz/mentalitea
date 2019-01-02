@@ -5,6 +5,8 @@ html {
 
 body {
   background-image: url("images/app-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -13,7 +15,7 @@ body {
 .App {
   text-align: center;
   display: grid;
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr auto ;
   grid-template-areas: 
   "header"
   "content";
