@@ -13,7 +13,8 @@ const moods = [{
   moodId: 1
   }];
 
-  const returnTeaListResultsMock = jest.fn();
+const getMoodFromDescriptorMock = jest.fn();
+const toggleSplashMock = jest.fn();
 
 describe('Splash', () => {
   let wrapper;
@@ -21,8 +22,8 @@ describe('Splash', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Splash moods={moods}
-              // getMoodFromDescriptor={getMoodFromDescriptor}
-              // toggleSplash={toggleSplash}
+              getMoodFromDescriptor={getMoodFromDescriptorMock}
+              toggleSplash={toggleSplashMock}
               />
       );
   });
@@ -34,7 +35,8 @@ describe('Splash', () => {
 
   it('should invoke toggleSplash and getMoodFromDescriptor when clicked', () => {
     wrapper.find('.splash-page-button').simulate('click');
-    expect(returnTeaListResultsMock).toBeCalled();
+    expect(getMoodFromDescriptorMock).toBeCalled();
+    expect(toggleSplashMock).toBeCalled();
   });
   
 });
