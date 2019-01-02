@@ -43,7 +43,7 @@ export default class Controls extends Component {
           </div>
           <div className="right-nested-options">          
               <select className="user-reselected-mood" onChange={this.changeUserSelectedMood}>
-                <option>Select another mood</option>
+                <option value="">Select another mood</option>
                 {
                   this.props.moods.reduce((allDescriptors, mood) => {
                     return allDescriptors.concat(mood.descriptors);
