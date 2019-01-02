@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeaCard should display tea card and tea image 1`] = `
+<li
+  className="tea-card"
+  onClick={[Function]}
+>
+  <h2
+    className="tea-name-unexpanded"
+  >
+    Irish Breakfast
+  </h2>
+  <img
+    alt=""
+    className="tea-image-unexpanded"
+    src="Irish Breakfast.png"
+  />
+</li>
+`;
+
+exports[`TeaCard should display teacard and tea image 1`] = `
+<li
+  className="tea-card"
+  onClick={[Function]}
+>
+  <h2
+    className="tea-name-unexpanded"
+  >
+    Irish Breakfast
+  </h2>
+  <img
+    alt=""
+    className="tea-image-unexpanded"
+    src="Irish Breakfast.png"
+  />
+</li>
+`;
