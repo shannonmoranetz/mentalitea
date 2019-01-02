@@ -12,7 +12,7 @@ export default function TeaList(props) {
         {
           props.userSelectedTea.map((tea, index) => {
             return (
-              <TeaCard key={index} id={tea.tea} filteredTeaList={tea}/>                                                                                                                      
+              <TeaCard key={index} teaName={tea.tea} filteredTeaList={tea}/>                                                                                                                      
             );
           })
         }
