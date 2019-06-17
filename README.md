@@ -1,51 +1,42 @@
-# MentaliTea
+# Mentalitea
 
-## Project Description
-  MentaliTea is a web application built for Tea enthusiasts and those looking for herbal support of their mood. MentaliTea allows users to select their current/future mood and be given a list of Teas known to match or assist their mental well being. 
+## Match tea flavors to your mood
 
+* * *
 
-Current Version: 
-![Current Version](https://i.imgur.com/wu8VrCX.png)
+### Find the perfect tea for your current state of mind.
 
-## Getting Started
+![Screenshot](https://i.imgur.com/wu8VrCX.png)
 
-These instructions will get a copy of the project up and running on your local machine for usage and testing purposes. 
+### Demo
 
-clone down the repository:
+[Click to view live app demo](https://shannonmoranetz.github.io/mentalitea)
+
+### Features
+
+*   22 selectable moods & 31 selectable teas
+*   Filter by caffeine
+*   Expandable tea data
+
+### Tech Stack
+
+*   React
+*   CSS ~ Sass
+*   Jest & Enzyme
+
+### Installation
+
+* Dependencies:
 ```
-$ git clone https://github.com/shannonmoranetz/mentalitea.git
+npm i
+```
+* Start:
+```
+npm start
 ```
 
-cd into directory and run npm install:
-```
-$ npm install
-```
+### Contributors
 
-launch in your browser:
-```
-$ npm start
-```
-
-## Project Development Notes:
-MentialiTea was built using ReactJS, and tested using Jest and Enyzme. The project incorporates class and functional components, along SASS styling for visualization. MentaliTea was created over a 2 week period as a 3-person group project in Module 2 of the Front-End Engineering program at Turing School of Software and Design. 
-
-### Wireframe:
-![Wireframe](https://i.imgur.com/ND4XIS4.png "Wireframe")
-
-### Link to Retro Log:
-[Retro Log](https://github.com/shannonmoranetz/mentalitea/issues/10)
-
-## Future Development and Extensions Notes:
-Additional styling on the expanded cards
-Better quality images for the teas
-Additional teas and moods
-
-## Original Assignment
-[Whateverly, Mod 2 at the Turing School of Software and Design](http://frontend.turing.io/projects/whateverly.html)
-
-## Contributors
-Shannon Moranetz: https://github.com/shannonmoranetz
-
-Paul Vangelakos: https://github.com/pvinthemix/
-
-Gabriel Inzurriaga: https://github.com/Inzurriaga
+* [Shannon Moranetz](https://github.com/shannonmoranetz)
+* [Paul Vangelakos](https://github.com/pvinthemix)
+* [Gabriel Inzurriaga](https://github.com/inzurriaga)
